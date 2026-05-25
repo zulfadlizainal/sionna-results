@@ -45,14 +45,14 @@ Copyright &copy; 2026 Zulfadli Zainal
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-  { "Table of Contents" = "index.md" },
-  { "Test Results" = [
-    { "Diffraction" = [
-      { "EXP-001" = "Diffraction/exp-001-name.md" },
-      { "EXP-002" = "Diffraction/exp-001-name.md" },
+  { "Content" = "index.md" },
+  { "Results" = [
+    { "Blockage" = [
+      { "EXP-001" = "Blockage/exp-001-name.md" },
+      { "EXP-002" = "Blockage/exp-001-name.md" },
     ]},
   ]},
-  { "Technical Report" = "https://arxiv.org/abs/YOUR_PAPER_ID" },
+  { "Technical Report ⤴" = "https://arxiv.org/abs/YOUR_PAPER_ID" },
 ]
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
