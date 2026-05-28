@@ -16,7 +16,7 @@ List of experiments published in the repository so far:
 
 | Test ID | Test Name | Status | Date Published | Sionna Version | Result |
 |----|----|----|----|----|----|
-| Blockage-001 | Effect of Signal Attenuation Across Different Blocking Materials | ✅ Done | 2026-05-28 | v2.0.1 | [View](Blockage/Blockage-001.md) |
+| Blockage-001 | Effect of Signal Attenuation Across Different Blocking Materials | ✅ Done | 2026-05-28 | v2.0.1 | [View](https://github.com/zulfadlizainal/sionna-results/blob/main/docs/docs/Blockage/Blockage-001.md) |
 
 ## Requirement
 
@@ -32,3 +32,31 @@ To regenerate the results from experiments in this repository, users need to con
 | 6 | Blender Mitsuba Add On | [Get](https://github.com/mitsuba-renderer/mitsuba-blender) | Enables physically-based rendering for accurate electromagnetic wave visualization |
 | 7 | Optional: Jupyter Notebook | [Get](https://jupyter.org/install) | Interactive environment for running experiments and analyzing results |
 | 8 | Optional: 3D Model of Tokyo | [Get](https://info.tokyo-digitaltwin.metro.tokyo.lg.jp/3dmodel/) | Provides realistic urban 3D data for high-fidelity simulation scenarios |
+
+## Citation
+
+If you use the results from this repository, please cite it as:
+
+```bibtex
+@misc{sionna_results,
+  title        = {Sionna Results: Simulation Outputs Generated Using the Sionna Toolkit},
+  author       = {Zulfadli Zainal},
+  year         = {2026},
+  howpublished = {\url{https://github.com/zulfadlizainal/sionna-results}},
+  note         = {A curated collection of simulation results generated using the NVIDIA Sionna open source library}
+}
+```
+
+If you use the software in any way, please cite the author of the software:
+
+```bibtex
+@software{sionna,
+ title = {Sionna},
+ author = {Hoydis, Jakob and Cammerer, Sebastian and {Ait Aoudia}, Fayçal and
+ Nimier-David, Merlin and Maggi, Lorenzo and Marcus, Guillermo and Vem, Avinash and Keller,
+ Alexander},
+ note = {https://nvlabs.github.io/sionna/},
+ year = {2022},
+ version = {2.0.1}
+}
+```

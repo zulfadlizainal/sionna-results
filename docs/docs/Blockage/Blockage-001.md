@@ -10,7 +10,7 @@ The figure below shows a simple implementation of the experiment.
 
 ![Test Design](assets/001-result1.png)
 
-!!! note
+!!! info
 
     [Sionna](https://nvlabs.github.io/sionna/) provides a list of materials for propagation simulation in its toolkit, called [Radio Materials](https://nvlabs.github.io/sionna/rt/api/radio_materials.html). Each material has different electromagnetic properties, such as permittivity and conductivity, which affect signal propagation.
 
@@ -20,9 +20,21 @@ The figures below show that the transmitted signal is shadowed by the wall. Diff
 
 ![Radio Map](assets/001-result2.png)
 
+![Radio Map](assets/001-result3.png)
+
+![Radio Map](assets/001-result4.png)
+
+!!! warning
+
+    Plot generated using [scene.preview](https://nvlabs.github.io/sionna/rt/api/scene.html#sionna.rt.Scene.preview), and the RSS legend colors were not set. Refer to the next result plot to view the RSS with the legend colors limit defined.
+
 From the top-view [Radio Map](https://nvlabs.github.io/sionna/rt/api/radio_maps.html), it can be observed that signals barely reach the receiver when using Concrete, Plywood, and Metal walls. Other materials also affect the signal strength, but most signals are still able to reach the receiver.
 
-![Radio Map Top View](assets/001-result3.png)
+![Radio Map Top View](assets/001-result5.png)
+
+![Radio Map Top View](assets/001-result6.png)
+
+![Radio Map Top View](assets/001-result7.png)
 
 In [Sionna](https://nvlabs.github.io/sionna/), the received signal strength (RSS) for each propagation path can also be calculated. As shown from generated results below, <mark>some signal paths are still able to reach the receiver through Concrete, but the RSS is very low. For Metal and Plywood, no signal propagation paths are able to reach the receiver.</mark>
 
