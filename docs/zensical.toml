@@ -11,13 +11,13 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Sionna Results"
+site_name = "Sionna Result"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "Research experiments and results."
+site_description = "A curated collection of simulation results generated using the NVIDIA Sionna open source library"
 
 # The site_author attribute. This is used in the HTML head element.
 #
@@ -34,7 +34,7 @@ site_url = "https://zulfadlizainal.github.io/sionna-results/"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 Zulfadli Zainal
+Copyright &copy; 2026 <a href="https://www.linkedin.com/in/zulfadlizainal/">Zulfadli Zainal</a>
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -44,16 +44,10 @@ Copyright &copy; 2026 Zulfadli Zainal
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-nav = [
-  { "Content" = "index.md" },
-  { "Results" = [
-    { "Blockage" = [
-      { "EXP-001" = "Blockage/exp-001-name.md" },
-      { "EXP-002" = "Blockage/exp-001-name.md" },
-    ]},
-  ]},
-  { "Technical Report ⤴" = "https://arxiv.org/abs/YOUR_PAPER_ID" },
-]
+# nav = [
+#   {"GitHub Repo" = "https://github.com/zensical/docs"}
+# ]
+
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
 # CSS files.
@@ -200,7 +194,7 @@ features = [
     # In order to provide a better user experience on slow connections when
     # using instant navigation, a progress indicator can be enabled.
     # https://zensical.org/docs/setup/navigation/#progress-indicator
-    #"navigation.instant.progress",
+    # "navigation.instant.progress",
 
     # When navigation paths are activated, a breadcrumb navigation is rendered
     # above the title of each page
@@ -215,7 +209,7 @@ features = [
     # When sections are enabled, top-level sections are rendered as groups in
     # the sidebar for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-sections
-    "navigation.sections",
+    # "navigation.sections",
 
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
@@ -352,3 +346,4 @@ combine_header_slug = true
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true
 [project.markdown_extensions.pymdownx.tilde]
+[project.markdown_extensions.zensical.extensions.glightbox]

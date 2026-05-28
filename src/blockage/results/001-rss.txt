@@ -1,0 +1,7 @@
+Material: Concrete, RSS = [-121.75293] dBm
+Material: Brick, RSS = [-91.96423] dBm
+Material: Wood, RSS = [-79.30871] dBm
+Material: Glass, RSS = [-87.17416] dBm
+No paths for Plywood
+Material: Marble, RSS = [-79.04089] dBm
+No paths for Metal
