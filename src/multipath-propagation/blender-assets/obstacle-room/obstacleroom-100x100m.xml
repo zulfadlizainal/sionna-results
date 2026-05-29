@@ -1,0 +1,128 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="itu_very_dry_ground" name="itu_very_dry_ground">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.482353 0.247059 0.000000" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.250000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="itu_concrete" name="itu_concrete">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.276780 0.272482 0.295192" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.250000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="twosided" id="itu_glass" name="itu_glass">
+		<bsdf type="principled" name="bsdf">
+			<rgb value="0.134066 0.800142 0.800142" name="base_color"/>
+			<rgb value="1.000000 1.000000 1.000000" name="spec_tint"/>
+			<float name="spec_trans" value="0.000000"/>
+			<float name="metallic" value="0.000000"/>
+			<float name="anisotropic" value="0.000000"/>
+			<float name="roughness" value="0.250000"/>
+			<float name="sheen" value="0.000000"/>
+			<rgb value="1.000000 1.000000 1.000000" name="sheen_tint"/>
+			<float name="clearcoat" value="0.000000"/>
+			<float name="clearcoat_gloss" value="0.000900"/>
+			<float name="specular" value="0.500000"/>
+		</bsdf>
+	</bsdf>
+
+<!-- Emitters -->
+
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-Floor" name="mesh-Floor">
+		<string name="filename" value="meshes/Floor.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_very_dry_ground" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wall_1" name="mesh-Wall_1">
+		<string name="filename" value="meshes/Wall_1.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wall_4" name="mesh-Wall_4">
+		<string name="filename" value="meshes/Wall_4.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wall_2" name="mesh-Wall_2">
+		<string name="filename" value="meshes/Wall_2.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Wall_3" name="mesh-Wall_3">
+		<string name="filename" value="meshes/Wall_3.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_1" name="mesh-Obstacle_1">
+		<string name="filename" value="meshes/Obstacle_1.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_glass" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_3" name="mesh-Obstacle_3">
+		<string name="filename" value="meshes/Obstacle_3.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_glass" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_2" name="mesh-Obstacle_2">
+		<string name="filename" value="meshes/Obstacle_2.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_4" name="mesh-Obstacle_4">
+		<string name="filename" value="meshes/Obstacle_4.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_5" name="mesh-Obstacle_5">
+		<string name="filename" value="meshes/Obstacle_5.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_glass" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_6" name="mesh-Obstacle_6">
+		<string name="filename" value="meshes/Obstacle_6.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Obstacle_7" name="mesh-Obstacle_7">
+		<string name="filename" value="meshes/Obstacle_7.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu_glass" name="bsdf"/>
+	</shape>
+
+<!-- Volumes -->
+
+</scene>
