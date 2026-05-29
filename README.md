@@ -34,7 +34,7 @@ To regenerate the results from experiments in this repository, users need to con
 | 3 | PyTorch 2.9+ | [Get](https://pytorch.org/get-started/locally/) | Backend framework for tensor computation |
 | 4 | Optional: Blender LTS | [Get](https://www.blender.org/download/lts/) | 3D scene creation and visualization |
 | 5 | Optional: Blender OSM Add On | [Get](https://github.com/solido3d/blender-osm) | Imports OpenStreetMap 3D model into Blender |
-| 6 | Optional: Blender Mitsuba Add On | [Get](https://github.com/mitsuba-renderer/mitsuba-blender) | Allow Blender to exports 3D Mitsuba XML format |
+| 6 | Optional: Blender Mitsuba Add On | [Get](https://github.com/mitsuba-renderer/mitsuba-blender) | Allow Blender to export 3D Mitsuba XML format |
 | 7 | Optional: Jupyter Notebook | [Get](https://jupyter.org/install) | Interactive Python environment |
 | 8 | Optional: 3D Model of Tokyo | [Get](https://info.tokyo-digitaltwin.metro.tokyo.lg.jp/3dmodel/) | Realistic 3D Model |
 
