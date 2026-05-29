@@ -1,0 +1,12 @@
+Frequency: 450M, RSS = [-62.171818] dBm
+Frequency: 700M, RSS = [-62.77891] dBm
+Frequency: 900M, RSS = [-62.008064] dBm
+Frequency: 1.5G, RSS = [-66.966896] dBm
+Frequency: 2.1G, RSS = [-70.58682] dBm
+Frequency: 2.5G, RSS = [-82.00487] dBm
+Frequency: 3.5G, RSS = [-81.01307] dBm
+Frequency: 4.5G, RSS = [-81.67861] dBm
+Frequency: 6G, RSS = [-80.48494] dBm
+Frequency: 10G, RSS = [-100.747215] dBm
+Frequency: 28G, RSS = [-136.49324] dBm
+Frequency: 35G, RSS = [-157.17908] dBm
