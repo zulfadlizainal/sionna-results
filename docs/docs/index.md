@@ -16,6 +16,7 @@ List of experiments published in the repository so far:
 |----|----|----|----|----|----|
 | Blockage-001 | Effect of Signal Attenuation Across Different Blocking Materials | ✅ Done | 2026-05-28 | v2.0.1 | [View](Blockage/Blockage-001) |
 | Blockage-002 | Effect of Signal Attenuation at Different Frequencies Through a Blockage | ✅ Done | 2026-05-29 | v2.0.1 | [View](Blockage/Blockage-002) |
+| Multipath-001 | Extracting Sionna Paths Channel Coefficients (a) | ✅ Done | 2026-06-04 | v2.0.1 | [View](Multipath/Multipath-001) |
 
 ## Simulation Requirements
 
