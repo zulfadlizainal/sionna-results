@@ -2,17 +2,17 @@
 
 ## Test Description
 
-This experiment is to <mark>test the effect of blockage on an electromagnetic signal at different carrier frequencies</mark>. Depending on the transmitted carrier frequency, the effect of the attenuation is expected to be different. The effect of signal attenuation will be measured at the receiver located beyond the blocking material.
+This experiment is to test the effect of blockage on an electromagnetic signal at different carrier frequencies. Depending on the transmitted carrier frequency, the effect of the attenuation is expected to be different. The effect of signal attenuation will be measured at the receiver located beyond the blocking material.
 
 <!-- Objective and Hypothesis and Expected Output-->
 
 !!! example "Variables in this test"
 
-    <mark>Carrier Frequencies: 450M, 700M, 900M, 1.5G, 2.1G, 2.5G, 3.5G, 4.5G, 6G, 10G, 28G, 35G in Hz</mark>. The list of frequencies is decided based on [common frequency ranges deployed in 5G](https://www.rfwireless-world.com/terminology/5g-nr-frequency-bands-fr1-fr2). Frequencies <= 6G are used to represent FR1 Sub-6 frequencies, while frequencies >= 25G are used to represent FR2 mmWave frequencies.
+    Carrier Frequencies: 450M, 700M, 900M, 1.5G, 2.1G, 2.5G, 3.5G, 4.5G, 6G, 10G, 28G, 35G in Hz. The list of frequencies is decided based on [common frequency ranges deployed in 5G](https://www.rfwireless-world.com/terminology/5g-nr-frequency-bands-fr1-fr2). Frequencies <= 6G are used to represent FR1 Sub-6 frequencies, while frequencies >= 25G are used to represent FR2 mmWave frequencies.
 
 <!-- Test Scenario -->
 
-In this test, two devices, Tx and Rx, were placed facing each other. In between them, a wall was placed for the purpose of blocking the transmitted signal. <mark>Glass was chosen as the wall material to run the experiment because it covers a wide range of carrier frequencies</mark> based on the [ITU Radio Materials](https://nvlabs.github.io/sionna/rt/api/radio_materials.html). The Received Signal Strength ([RSS](https://nvlabs.github.io/sionna/rt/api/radio_maps.html#sionna.rt.RadioMap.rss)) before and beyond the wall will be evaluated to understand the effect of signal attenuation. The surrounding environment is kept open with no walls to eliminate any effects of signal reflections.
+In this test, two devices, Tx and Rx, were placed facing each other. In between them, a wall was placed for the purpose of blocking the transmitted signal. Glass was chosen as the wall material to run the experiment because it covers a wide range of carrier frequencies based on the [ITU Radio Materials](https://nvlabs.github.io/sionna/rt/api/radio_materials.html). The Received Signal Strength ([RSS](https://nvlabs.github.io/sionna/rt/api/radio_maps.html#sionna.rt.RadioMap.rss)) before and beyond the wall will be evaluated to understand the effect of signal attenuation. The surrounding environment is kept open with no walls to eliminate any effects of signal reflections.
 
 ![Test Design](output/002-result1.png)
 
@@ -36,7 +36,7 @@ In this test, two devices, Tx and Rx, were placed facing each other. In between 
 
 #### Result 1: Shadowing Effect through 2D Radio Map
 
-From a [2D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Radio-Maps.html), it can be seen that <mark>signals beyond the wall attenuate much more as the frequency increases.</mark> This effect is much more noticeable in mmWave frequencies (e.g. 28G, 35G Hz). Not only do signals beyond the wall attenuate more, but <mark>free-space propagation for signals before reaching the wall also attenuates much more as the frequency increases</mark>.
+From a [2D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Radio-Maps.html), it can be seen that signals beyond the wall attenuate much more as the frequency increases. This effect is much more noticeable in mmWave frequencies (e.g. 28G, 35G Hz). Not only do signals beyond the wall attenuate more, but free-space propagation for signals before reaching the wall also attenuates much more as the frequency increases.
 
 ![2D Radio Map 1](output/002-result2.png)
 
@@ -48,7 +48,7 @@ From a [2D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Radio-Maps.ht
 
 #### Result 2: Received Signal Strength at the Receiver
 
-In [Sionna](https://nvlabs.github.io/sionna/), the RSS for each propagation path can also be calculated through the [Paths.a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a) property. As shown from the generated results below, the receiver is able to receive at least a single signal path from the transmitter. It can be observed that <mark>the larger the carrier frequency, the higher the attenuation beyond the wall blockage.</mark>
+In [Sionna](https://nvlabs.github.io/sionna/), the RSS for each propagation path can also be calculated through the [Paths.a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a) property. As shown from the generated results below, the receiver is able to receive at least a single signal path from the transmitter. It can be observed that the larger the carrier frequency, the higher the attenuation beyond the wall blockage.
 
 ```python
 Result:
@@ -67,15 +67,15 @@ Frequency: 28G, RSS = [-136.49324] dBm
 Frequency: 35G, RSS = [-157.17908] dBm
 ```
 
-There is <mark>observable degradation in RSS at mmWave frequencies</mark> compared to other Sub-6 frequencies.
+There is observable degradation in RSS at mmWave frequencies compared to other Sub-6 frequencies.
 
 ![RSS for each Frequencies](output/002-result6.png)
 
 #### Key Takeaway
 
-1. The <mark>higher the carrier frequency, the higher the impact of signal attenuation</mark> due to blockage
+1. The higher the carrier frequency, the higher the impact of signal attenuation due to blockage
 2. Even during free-space propagation before reaching the wall, signals attenuate more at higher frequencies
-3. <mark>mmWave frequencies are very sensitive to blockage</mark>, even for see-through materials like Glass
+3. mmWave frequencies are very sensitive to blockage, even for see-through materials like Glass
 
 ## Source Code
 

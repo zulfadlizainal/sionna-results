@@ -1,14 +1,14 @@
-# Multipath-001: Extracting Sionna Paths Channel Coefficients (a)
+# Multipath-001: Extracting Sionna Paths Channel Coefficients (a) and Sionna Paths Delay (tau)
 
 ## Test Description
 
 <!-- Objective and Hypothesis and Expected Output -->
 
-The purpose of this experiment is to <mark>extract the Paths Channel Coefficients ([a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a))</mark> from the [Paths](https://nvlabs.github.io/sionna/rt/api/paths.html#) class in Sionna. The Sionna library provides a list of methods and properties, such as [a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a) and [tau](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.tau), which are convenient for studying multipath propagation. This test attempts to extract those properties.
+The purpose of this experiment is to extract the Paths Channel Coefficients ([a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a)) and Paths Delay ([tau](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.tau)) from the [Paths](https://nvlabs.github.io/sionna/rt/api/paths.html#) class in Sionna. The Sionna library provides a list of methods and properties which are convenient for studying multipath propagation. This test attempts to extract those properties.
 
 !!! example "Variables in this test"
 
-    <mark>Environments: Low- and high-obstacle environments</mark>. Different environments introduce different effects on the signal path due to interactions to the environments such as diffraction, reflection, refraction, etc.
+    Environments: Low- and high-obstacle environments. Different environments introduce different effects on the signal path due to interactions to the environments such as diffraction, reflection, refraction, etc.
 
 <!-- Test Scenario -->
 
@@ -40,7 +40,7 @@ In this test, two devices, Tx and Rx, were placed facing each other in a closed 
 
 #### Result 1: Shadowing Effect through 3D and 2D Radio Maps
 
-Below are the results of the Received Signal Strength ([RSS](https://nvlabs.github.io/sionna/rt/api/radio_maps.html#sionna.rt.RadioMap.rss)) in two different scene environments: an empty room and a room with obstacles. The RSS in the empty room shows much better readings compared to the room with obstacles. <mark>Rooms with obstacles generate a highly attenuated environment where signals are heavily shadowed by the obstacles</mark>.
+Below are the results of the Received Signal Strength ([RSS](https://nvlabs.github.io/sionna/rt/api/radio_maps.html#sionna.rt.RadioMap.rss)) in two different scene environments: an empty room and a room with obstacles. The RSS in the empty room shows much better readings compared to the room with obstacles. Rooms with obstacles generate a highly attenuated environment where signals are heavily shadowed by the obstacles.
 
 ![3D Radio Map](output/001-result2.png)
 
@@ -54,7 +54,7 @@ Below are the results of the Received Signal Strength ([RSS](https://nvlabs.gith
 
 Just like the [RadioMapSolver](https://nvlabs.github.io/sionna/rt/api/radio_map_solvers.html) class in Sionna, the [PathSolver](https://nvlabs.github.io/sionna/rt/api/paths_solvers.html#sionna.rt.PathSolver) class allows users to view the scene of each signal path transmitted from the Tx. From this, users can visualize the interactions of each signal path with the environment in 3D—whether it is reflected, refracted, diffracted, etc.
 
-From the results, it can be seen that the <mark>empty room mostly has reflection-type path interactions due to its LOS environment, where the paths are only reflected from the outer walls. In contrast, in the room with obstacles, multiple types of signal path interactions can be observed more prominently</mark>.
+From the results, it can be seen that the empty room mostly has reflection-type path interactions due to its LOS environment, where the paths are only reflected from the outer walls. In contrast, in the room with obstacles, multiple types of signal path interactions can be observed more prominently.
 
 ![Path Map](output/001-result4.png)
 
@@ -64,11 +64,11 @@ From the results, it can be seen that the <mark>empty room mostly has reflection
 
 #### Result 3: Paths Channel Coefficients (a) for Each Signal Path
 
-The <mark>Paths Channel Coefficients ([a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a)) property in Sionna is a tuple data type that returns the I-Q values of the coefficients—the real and imaginary parts of the signal</mark>. These coefficients can be extracted for each signal path.
+The Paths Channel Coefficients ([a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a)) property in Sionna is a tuple data type that returns the I-Q values of the coefficients—the real and imaginary parts of the signal. These coefficients can be extracted for each signal path.
 
 ![Paths Channel Coefficients (a)](output/001-result5.png)
 
-Each signal path has an ID. <mark>From the extracted I-Q channel coefficients, other meaningful quantities can be derived, such as signal magnitude, phase, and path channel gain</mark>. Eventually, these values can be used to calculate the RSS at the receiver—see the next section.
+Each signal path has an ID. From the extracted I-Q channel coefficients, other meaningful quantities can be derived, such as signal magnitude, phase, and path channel gain. Eventually, these values can be used to calculate the RSS at the receiver—see the next section.
 
 ![Paths Channel Coefficients (a) Data Frames](output/001-result6.png)
 
@@ -88,9 +88,9 @@ $$
 
 #### Result 4: Received Signal Strength at the Receiver Derived from (a)
 
-<mark>When generating RSS using Sionna's [RadioMapSolver](https://nvlabs.github.io/sionna/rt/api/radio_map_solvers.html), Sionna calculates RSS non-coherently</mark>. This means that Sionna only considers the total power arriving at the Rx without considering fast-fading effects (signals being constructively and destructively combined due to multipath magnitude and phase differences). This calculation is computationally efficient.
+When generating RSS using Sionna's [RadioMapSolver](https://nvlabs.github.io/sionna/rt/api/radio_map_solvers.html), Sionna calculates RSS non-coherently. This means that Sionna only considers the total power arriving at the Rx without considering fast-fading effects (signals being constructively and destructively combined due to multipath magnitude and phase differences). This calculation is computationally efficient.
 
-However, <mark>when using [PathSolver](https://nvlabs.github.io/sionna/rt/api/paths_solvers.html#sionna.rt.PathSolver), users have the flexibility to calculate RSS at the Rx either non-coherently or coherently</mark>, since the Paths Channel Coefficients (a) for each signal path are available as real and imaginary values.
+However, when using [PathSolver](https://nvlabs.github.io/sionna/rt/api/paths_solvers.html#sionna.rt.PathSolver), users have the flexibility to calculate RSS at the Rx either non-coherently or coherently, since the Paths Channel Coefficients (a) for each signal path are available as real and imaginary values.
 
 Non-Coherent RSS – Just sum all the channel path gain for all paths.
 
@@ -104,9 +104,9 @@ $$
 RSS_{\text{coherent}} = P_{\text{tx}} + 10\log_{10}\left(\left|\sum_{i=1}^{N} a_i\right|^2\right) \ \text{dBm}
 $$
 
-Below are sample results for both the empty room and the room with obstacles using coherent and non-coherent RSS calculations. <mark>In the empty room, it can be observed that the number of paths is much greater due to its LOS environment. In the room with obstacles, many signal paths are blocked and unable to reach the Rx. As expected, the non-coherent RSS is much higher in the empty room because the total received power is higher in an LOS environment</mark>.
+Below are sample results for both the empty room and the room with obstacles using coherent and non-coherent RSS calculations. In the empty room, it can be observed that the number of paths is much greater due to its LOS environment. In the room with obstacles, many signal paths are blocked and unable to reach the Rx. As expected, the non-coherent RSS is much higher in the empty room because the total received power is higher in an LOS environment.
 
-However, this does not necessarily mean that RSS at the Rx is always poorer in complex multipath environments such as the room with obstacles. <mark>It can be observed that signals may combine constructively in complex multipath environments, causing the coherent RSS to be higher than expected</mark>.
+However, this does not necessarily mean that RSS at the Rx is always poorer in complex multipath environments such as the room with obstacles. It can be observed that signals may combine constructively in complex multipath environments, causing the coherent RSS to be higher than expected.
 
 **Empty Room:**
 
@@ -134,12 +134,33 @@ RSS (Coherent Case): -102.25117489238426 dBm
 Delta: 16.532224281302604 dB
 ```
 
+#### Result 5: Paths Delay (tau) for Each Signal Path
+
+The Paths Delay ([tau](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.tau)) property in Sionna provides the delay of each path separately in seconds.
+
+![Paths Delay (tau)](output/001-result7.png)
+
+Each signal path has an ID. From the extracted delay (tau), other meaningful quantities can be derived, such as delay in nanoseconds and free-space path distance.
+
+![Paths Delay (tau) Data Frames](output/001-result8.png)
+
+#### Result 6: Power Delay Profile (PDP)
+
+In practice, the Power Delay Profile (PDP) is often used to evaluate multipath channel path gains based on their respective path delays.
+
+In the result below, it can be seen that the empty room has a higher channel path gain for its fastest path compared to the room with obstacles due to its LOS environment. The fastest path also has a higher channel path gain compared to other slower paths. The profile or pattern of multipath grouping can also be studied through this stem chart.
+
+![PDP](output/001-result9.png)
+
 #### Key Takeaways
 
-1. Sionna is able to generate <mark>each signal path transmitted from Tx to Rx, and all of its interactions with the environment can be visualized</mark> in a 3D scene.
-2. Paths Channel Coefficients (a) for each <mark>signal path can be extracted along with their real and imaginary values and path IDs</mark>.
-3. Other meaningful quantities, such as <mark>signal magnitude, phase, channel path gain, and RSS, can be calculated from the Paths Channel Coefficients (a)</mark>.
-4. <mark>PathSolver provides the flexibility to calculate RSS coherently since the real and imaginary values of each signal path are provided</mark> separately through the Paths Channel Coefficients (a).
+1. Sionna can generate and visualize every signal path transmitted from Tx to Rx, including all interactions with the surrounding environment in a 3D scene.
+2. Path channel coefficients (a) and path delays (tau) can be extracted for each signal path, together with their corresponding path IDs.
+3. The path channel coefficients (a) provide the real and imaginary components of each path, enabling the calculation of signal magnitude, phase, channel path gain, and RSS.
+4. Since the real and imaginary components are available separately, PathSolver enables coherent RSS calculations across multiple paths.
+5. Path delays (tau) can be used to derive additional metrics such as path distance.
+6. The fastest path is seen to exhibit a higher channel path gain than the slower paths.
+7. The fastest past in LOS environments showing better channel gain compared to NLOS.
 
 ## Source Code
 
@@ -247,7 +268,7 @@ a_imag = a_imag.numpy()
 # Reconstruct complex channel coefficients in real and imaginary form
 a = a_real + 1j * a_imag
 
-# Optional - Extract path delays [num_rx, num_tx, num_paths]
+# Extract path delays [num_rx, num_tx, num_paths]
 tau = paths.tau
 if isinstance(tau, tuple):
     tau = tau[0]
@@ -296,11 +317,11 @@ for i in range(num_paths):
     channel_path_gain = magnitude**2
     channel_path_gain_db = 10*np.log10(channel_path_gain)
 
-    # Optional - Delay
+    # Delay
     delay_s = tau[0, 0, i]
     delay_ns = delay_s * 1e9
 
-    # Optional - Equivalent propagation distance (Free space)
+    # Equivalent propagation distance (Free space)
     distance_m = delay_s * 3e8
 
     path_data.append({
@@ -350,14 +371,14 @@ print(f"Delta: {rss_non_coherent-rss_coherent} dB")
 # Export CSV
 df_paths.to_csv("output/multipath_paths_list_empty-room.csv", index=False)
 
-# # Optional - Power Delay Profile (PDP)
-# plt.figure(figsize=(8,4))
-# plt.stem(df_paths["delay_ns"], df_paths["channel_path_gain_db"])
-# plt.xlabel("Delay (ns)")
-# plt.ylabel("Channel Path Gain (dB)")
-# plt.title("Power Delay Profile (PDP)")
-# plt.grid(True)
-# plt.show()
+# Power Delay Profile (PDP)
+plt.figure(figsize=(8,4))
+plt.stem(df_paths["delay_ns"], df_paths["channel_path_gain_db"])
+plt.xlabel("Delay (ns)")
+plt.ylabel("Channel Path Gain (dB)")
+plt.title("Power Delay Profile (PDP)")
+plt.grid(True)
+plt.show()
 
 # # Optional - I-Q Plot
 # plt.figure(figsize=(6,6))

@@ -4,11 +4,11 @@
 
 <!-- Objective and Hypothesis and Expected Output-->
 
-This experiment is to <mark>test the effect of blockage on an electromagnetic signal using different major blockage materials</mark> in a normal environment. Depending on the material that blocks the signal, the effect of the attenuation is expected to be different. The effect of signal attenuation will be measured at the receiver located beyond the blocking material. The shadowing effect of the signal will also be verified in a 3D render to provide a better view of the blockage.
+This experiment is to test the effect of blockage on an electromagnetic signal using different major blockage materials in a normal environment. Depending on the material that blocks the signal, the effect of the attenuation is expected to be different. The effect of signal attenuation will be measured at the receiver located beyond the blocking material. The shadowing effect of the signal will also be verified in a 3D render to provide a better view of the blockage.
 
 !!! example "Variables in this test"
 
-    <mark>Blockage materials: Concrete, Brick, Wood, Glass, Plywood, Marble, and Metal.</mark> Each material has its own specifications in terms of conductivity, permittivity, and frequency ranges defined by ITU. [Sionna](https://nvlabs.github.io/sionna/) enables these [ITU Radio Materials](https://nvlabs.github.io/sionna/rt/api/radio_materials.html) to be imported directly from the Sionna library.
+    Blockage materials: Concrete, Brick, Wood, Glass, Plywood, Marble, and Metal. Each material has its own specifications in terms of conductivity, permittivity, and frequency ranges defined by ITU. [Sionna](https://nvlabs.github.io/sionna/) enables these [ITU Radio Materials](https://nvlabs.github.io/sionna/rt/api/radio_materials.html) to be imported directly from the Sionna library.
 
 <!-- Test Scenario -->
 
@@ -36,7 +36,7 @@ In this test, two devices, Tx and Rx, were placed facing each other. In between 
 
 #### Result 1: Shadowing Effect through 3D Radio Map
 
-Below is the result of RSS [3D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Introduction.html#Radio-Maps) in dBm generated through [Scene.preview()](https://nvlabs.github.io/sionna/rt/api/scene.html#sionna.rt.Scene.preview) function in Sionna. It can be observed that different blockage materials could have different effects on the attenuation of the electromagnetic signal. <mark>Materials like Concrete, Plywood, and Metal can be seen effectively blocking the signal</mark> from arriving at the receiver.
+Below is the result of RSS [3D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Introduction.html#Radio-Maps) in dBm generated through [Scene.preview()](https://nvlabs.github.io/sionna/rt/api/scene.html#sionna.rt.Scene.preview) function in Sionna. It can be observed that different blockage materials could have different effects on the attenuation of the electromagnetic signal. Materials like Concrete, Plywood, and Metal can be seen effectively blocking the signal from arriving at the receiver.
 
 ![3D Radio Map 1](output/001-result2.png)
 
@@ -50,7 +50,7 @@ Below is the result of RSS [3D Radio Map](https://nvlabs.github.io/sionna/rt/tut
 
 #### Result 2: Shadowing Effect through 2D Radio Map
 
-The 3D Radio Map can also be generated in a [2D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Radio-Maps.html) top view. It can be observed that <mark>signals barely reach the receiver when using Concrete, Plywood, and Metal as blockage materials</mark> for the wall. Other materials also affect the signal strength, but most signals are still able to reach the receiver.
+The 3D Radio Map can also be generated in a [2D Radio Map](https://nvlabs.github.io/sionna/rt/tutorials/Radio-Maps.html) top view. It can be observed that signals barely reach the receiver when using Concrete, Plywood, and Metal as blockage materials for the wall. Other materials also affect the signal strength, but most signals are still able to reach the receiver.
 
 ![2D Radio Map 1](output/001-result5.png)
 
@@ -60,7 +60,7 @@ The 3D Radio Map can also be generated in a [2D Radio Map](https://nvlabs.github
 
 #### Result 3: Received Signal Strength in Receiver
 
-In Sionna, the RSS for each propagation path can also be calculated through the [Paths.a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a) property. As shown from the generated results below, <mark>some signal paths are still able to reach the receiver through Concrete, but the RSS is very low. For Metal and Plywood, no signal propagation paths are able to reach the receiver.</mark>
+In Sionna, the RSS for each propagation path can also be calculated through the [Paths.a](https://nvlabs.github.io/sionna/rt/api/paths.html#sionna.rt.Paths.a) property. As shown from the generated results below, some signal paths are still able to reach the receiver through Concrete, but the RSS is very low. For Metal and Plywood, no signal propagation paths are able to reach the receiver.
 
 ```python
 Result:
@@ -76,7 +76,7 @@ No paths for Metal
 
 #### Key Takeaway
 
-1. Based on these results, it can be concluded that the material attenuation ranking from highest to lowest is: <mark>Metal/Plywood > Concrete > Brick > Glass > Wood/Marble</mark>
+1. Based on these results, it can be concluded that the material attenuation ranking from highest to lowest is: Metal/Plywood > Concrete > Brick > Glass > Wood/Marble
 
 ## Source Code
 

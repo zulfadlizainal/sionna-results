@@ -1,4 +1,4 @@
-# Getting Started
+# About
 
 This repository is made for the purpose of testing [Sionna](https://nvlabs.github.io/sionna/) by [NVIDIA Labs](https://research.nvidia.com/research-labs).
 
@@ -22,8 +22,7 @@ List of experiments published in the repository so far:
 |----|----|----|----|----|----|
 | Blockage-001 | Effect of Signal Attenuation Across Different Blocking Materials | ✅ Done | 2026-05-28 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
 | Blockage-002 | Effect of Signal Attenuation at Different Frequencies Through a Blockage | ✅ Done | 2026-05-29 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
-| Multipath-001 | Extracting Sionna Paths Channel Coefficients (a) | ✅ Done | 2026-06-04 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
-| Multipath-002 | Extracting Sionna Paths Delay (tau) | ✅ Done | 2026-06-04 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
+| Multipath-001 | Extracting Sionna Paths Channel Coefficients (a) and Sionna Paths Delay (tau) | ✅ Done | 2026-06-04 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
 
 ## Simulation Requirements
 

@@ -1,0 +1,2274 @@
+<scene version="2.1.0">
+
+<!-- Defaults, these can be set via the command line: -Darg=value -->
+
+
+<!-- Camera and Rendering Parameters -->
+
+	<integrator type="path" id="elm__0" name="elm__0">
+		<integer name="max_depth" value="12"/>
+	</integrator>
+
+<!-- Materials -->
+
+	<bsdf type="twosided" id="itu-medium_dry_ground" name="itu-medium_dry_ground">
+		<bsdf type="diffuse" name="bsdf">
+			<rgb value="0.800497 0.267374 0.007669" name="reflectance"/>
+		</bsdf>
+	</bsdf>
+	<bsdf type="diffuse" id="itu-concrete" name="itu-concrete">
+		<rgb value="1.000000 0.500000 0.200000" name="reflectance"/>
+	</bsdf>
+	<bsdf type="diffuse" id="itu-ceiling_board" name="itu-ceiling_board">
+		<rgb value="0.290000 0.250000 0.210000" name="reflectance"/>
+	</bsdf>
+
+<!-- Emitters -->
+
+
+<!-- Shapes -->
+
+	<shape type="ply" id="mesh-Plane" name="mesh-Plane">
+		<string name="filename" value="meshes/Plane.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-medium_dry_ground" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅東口_自転車駐車場-itu-concrete" name="mesh-大森駅東口_自転車駐車場-itu-concrete">
+		<string name="filename" value="meshes/大森駅東口_自転車駐車場-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅東口_自転車駐車場-itu-ceiling_board" name="mesh-大森駅東口_自転車駐車場-itu-ceiling_board">
+		<string name="filename" value="meshes/大森駅東口_自転車駐車場-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-atre2-itu-concrete" name="mesh-atre2-itu-concrete">
+		<string name="filename" value="meshes/atre2-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-atre2-itu-ceiling_board" name="mesh-atre2-itu-ceiling_board">
+		<string name="filename" value="meshes/atre2-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element-itu-concrete" name="mesh-element-itu-concrete">
+		<string name="filename" value="meshes/element-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element-itu-ceiling_board" name="mesh-element-itu-ceiling_board">
+		<string name="filename" value="meshes/element-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_001-itu-concrete" name="mesh-element_001-itu-concrete">
+		<string name="filename" value="meshes/element_001-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_001-itu-ceiling_board" name="mesh-element_001-itu-ceiling_board">
+		<string name="filename" value="meshes/element_001-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_002-itu-concrete" name="mesh-element_002-itu-concrete">
+		<string name="filename" value="meshes/element_002-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_002-itu-ceiling_board" name="mesh-element_002-itu-ceiling_board">
+		<string name="filename" value="meshes/element_002-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_003-itu-concrete" name="mesh-element_003-itu-concrete">
+		<string name="filename" value="meshes/element_003-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_003-itu-ceiling_board" name="mesh-element_003-itu-ceiling_board">
+		<string name="filename" value="meshes/element_003-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-山王アーバンライフ-itu-concrete" name="mesh-山王アーバンライフ-itu-concrete">
+		<string name="filename" value="meshes/山王アーバンライフ-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-山王アーバンライフ-itu-ceiling_board" name="mesh-山王アーバンライフ-itu-ceiling_board">
+		<string name="filename" value="meshes/山王アーバンライフ-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_City_Omori_Sanno-itu-concrete" name="mesh-The_City_Omori_Sanno-itu-concrete">
+		<string name="filename" value="meshes/The_City_Omori_Sanno-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-The_City_Omori_Sanno-itu-ceiling_board" name="mesh-The_City_Omori_Sanno-itu-ceiling_board">
+		<string name="filename" value="meshes/The_City_Omori_Sanno-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_004-itu-concrete" name="mesh-element_004-itu-concrete">
+		<string name="filename" value="meshes/element_004-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_004-itu-ceiling_board" name="mesh-element_004-itu-ceiling_board">
+		<string name="filename" value="meshes/element_004-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_005-itu-concrete" name="mesh-element_005-itu-concrete">
+		<string name="filename" value="meshes/element_005-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_005-itu-ceiling_board" name="mesh-element_005-itu-ceiling_board">
+		<string name="filename" value="meshes/element_005-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_006-itu-concrete" name="mesh-element_006-itu-concrete">
+		<string name="filename" value="meshes/element_006-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_006-itu-ceiling_board" name="mesh-element_006-itu-ceiling_board">
+		<string name="filename" value="meshes/element_006-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_007-itu-concrete" name="mesh-element_007-itu-concrete">
+		<string name="filename" value="meshes/element_007-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_007-itu-ceiling_board" name="mesh-element_007-itu-ceiling_board">
+		<string name="filename" value="meshes/element_007-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_008-itu-concrete" name="mesh-element_008-itu-concrete">
+		<string name="filename" value="meshes/element_008-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_008-itu-ceiling_board" name="mesh-element_008-itu-ceiling_board">
+		<string name="filename" value="meshes/element_008-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_009-itu-concrete" name="mesh-element_009-itu-concrete">
+		<string name="filename" value="meshes/element_009-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_009-itu-ceiling_board" name="mesh-element_009-itu-ceiling_board">
+		<string name="filename" value="meshes/element_009-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_010-itu-concrete" name="mesh-element_010-itu-concrete">
+		<string name="filename" value="meshes/element_010-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_010-itu-ceiling_board" name="mesh-element_010-itu-ceiling_board">
+		<string name="filename" value="meshes/element_010-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_011-itu-concrete" name="mesh-element_011-itu-concrete">
+		<string name="filename" value="meshes/element_011-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_011-itu-ceiling_board" name="mesh-element_011-itu-ceiling_board">
+		<string name="filename" value="meshes/element_011-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森北一ハイツ-itu-concrete" name="mesh-大森北一ハイツ-itu-concrete">
+		<string name="filename" value="meshes/大森北一ハイツ-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森北一ハイツ-itu-ceiling_board" name="mesh-大森北一ハイツ-itu-ceiling_board">
+		<string name="filename" value="meshes/大森北一ハイツ-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_012-itu-concrete" name="mesh-element_012-itu-concrete">
+		<string name="filename" value="meshes/element_012-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_012-itu-ceiling_board" name="mesh-element_012-itu-ceiling_board">
+		<string name="filename" value="meshes/element_012-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_013-itu-concrete" name="mesh-element_013-itu-concrete">
+		<string name="filename" value="meshes/element_013-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_013-itu-ceiling_board" name="mesh-element_013-itu-ceiling_board">
+		<string name="filename" value="meshes/element_013-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_014-itu-concrete" name="mesh-element_014-itu-concrete">
+		<string name="filename" value="meshes/element_014-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_014-itu-ceiling_board" name="mesh-element_014-itu-ceiling_board">
+		<string name="filename" value="meshes/element_014-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_015-itu-concrete" name="mesh-element_015-itu-concrete">
+		<string name="filename" value="meshes/element_015-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_015-itu-ceiling_board" name="mesh-element_015-itu-ceiling_board">
+		<string name="filename" value="meshes/element_015-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_016-itu-concrete" name="mesh-element_016-itu-concrete">
+		<string name="filename" value="meshes/element_016-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_016-itu-ceiling_board" name="mesh-element_016-itu-ceiling_board">
+		<string name="filename" value="meshes/element_016-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-OMORI_RAINBOW_BUILDING-itu-concrete" name="mesh-OMORI_RAINBOW_BUILDING-itu-concrete">
+		<string name="filename" value="meshes/OMORI_RAINBOW_BUILDING-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-OMORI_RAINBOW_BUILDING-itu-ceiling_board" name="mesh-OMORI_RAINBOW_BUILDING-itu-ceiling_board">
+		<string name="filename" value="meshes/OMORI_RAINBOW_BUILDING-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_017-itu-concrete" name="mesh-element_017-itu-concrete">
+		<string name="filename" value="meshes/element_017-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_017-itu-ceiling_board" name="mesh-element_017-itu-ceiling_board">
+		<string name="filename" value="meshes/element_017-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_018-itu-concrete" name="mesh-element_018-itu-concrete">
+		<string name="filename" value="meshes/element_018-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_018-itu-ceiling_board" name="mesh-element_018-itu-ceiling_board">
+		<string name="filename" value="meshes/element_018-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_019-itu-concrete" name="mesh-element_019-itu-concrete">
+		<string name="filename" value="meshes/element_019-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_019-itu-ceiling_board" name="mesh-element_019-itu-ceiling_board">
+		<string name="filename" value="meshes/element_019-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_020-itu-concrete" name="mesh-element_020-itu-concrete">
+		<string name="filename" value="meshes/element_020-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_020-itu-ceiling_board" name="mesh-element_020-itu-ceiling_board">
+		<string name="filename" value="meshes/element_020-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_021-itu-concrete" name="mesh-element_021-itu-concrete">
+		<string name="filename" value="meshes/element_021-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_021-itu-ceiling_board" name="mesh-element_021-itu-ceiling_board">
+		<string name="filename" value="meshes/element_021-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_022-itu-concrete" name="mesh-element_022-itu-concrete">
+		<string name="filename" value="meshes/element_022-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_022-itu-ceiling_board" name="mesh-element_022-itu-ceiling_board">
+		<string name="filename" value="meshes/element_022-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_023-itu-concrete" name="mesh-element_023-itu-concrete">
+		<string name="filename" value="meshes/element_023-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_023-itu-ceiling_board" name="mesh-element_023-itu-ceiling_board">
+		<string name="filename" value="meshes/element_023-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_024-itu-concrete" name="mesh-element_024-itu-concrete">
+		<string name="filename" value="meshes/element_024-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_024-itu-ceiling_board" name="mesh-element_024-itu-ceiling_board">
+		<string name="filename" value="meshes/element_024-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_025-itu-concrete" name="mesh-element_025-itu-concrete">
+		<string name="filename" value="meshes/element_025-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_025-itu-ceiling_board" name="mesh-element_025-itu-ceiling_board">
+		<string name="filename" value="meshes/element_025-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_026-itu-concrete" name="mesh-element_026-itu-concrete">
+		<string name="filename" value="meshes/element_026-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_026-itu-ceiling_board" name="mesh-element_026-itu-ceiling_board">
+		<string name="filename" value="meshes/element_026-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_027-itu-concrete" name="mesh-element_027-itu-concrete">
+		<string name="filename" value="meshes/element_027-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_027-itu-ceiling_board" name="mesh-element_027-itu-ceiling_board">
+		<string name="filename" value="meshes/element_027-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-下川第５ビル-itu-concrete" name="mesh-下川第５ビル-itu-concrete">
+		<string name="filename" value="meshes/下川第５ビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-下川第５ビル-itu-ceiling_board" name="mesh-下川第５ビル-itu-ceiling_board">
+		<string name="filename" value="meshes/下川第５ビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_028-itu-concrete" name="mesh-element_028-itu-concrete">
+		<string name="filename" value="meshes/element_028-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_028-itu-ceiling_board" name="mesh-element_028-itu-ceiling_board">
+		<string name="filename" value="meshes/element_028-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_029-itu-concrete" name="mesh-element_029-itu-concrete">
+		<string name="filename" value="meshes/element_029-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_029-itu-ceiling_board" name="mesh-element_029-itu-ceiling_board">
+		<string name="filename" value="meshes/element_029-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_030-itu-concrete" name="mesh-element_030-itu-concrete">
+		<string name="filename" value="meshes/element_030-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_030-itu-ceiling_board" name="mesh-element_030-itu-ceiling_board">
+		<string name="filename" value="meshes/element_030-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_031-itu-concrete" name="mesh-element_031-itu-concrete">
+		<string name="filename" value="meshes/element_031-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_031-itu-ceiling_board" name="mesh-element_031-itu-ceiling_board">
+		<string name="filename" value="meshes/element_031-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_032-itu-concrete" name="mesh-element_032-itu-concrete">
+		<string name="filename" value="meshes/element_032-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_032-itu-ceiling_board" name="mesh-element_032-itu-ceiling_board">
+		<string name="filename" value="meshes/element_032-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_033-itu-concrete" name="mesh-element_033-itu-concrete">
+		<string name="filename" value="meshes/element_033-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_033-itu-ceiling_board" name="mesh-element_033-itu-ceiling_board">
+		<string name="filename" value="meshes/element_033-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_034-itu-concrete" name="mesh-element_034-itu-concrete">
+		<string name="filename" value="meshes/element_034-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_034-itu-ceiling_board" name="mesh-element_034-itu-ceiling_board">
+		<string name="filename" value="meshes/element_034-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-京浜急行高速バス-itu-concrete" name="mesh-京浜急行高速バス-itu-concrete">
+		<string name="filename" value="meshes/京浜急行高速バス-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-京浜急行高速バス-itu-ceiling_board" name="mesh-京浜急行高速バス-itu-ceiling_board">
+		<string name="filename" value="meshes/京浜急行高速バス-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_035-itu-concrete" name="mesh-element_035-itu-concrete">
+		<string name="filename" value="meshes/element_035-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_035-itu-ceiling_board" name="mesh-element_035-itu-ceiling_board">
+		<string name="filename" value="meshes/element_035-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅-itu-concrete" name="mesh-大森駅-itu-concrete">
+		<string name="filename" value="meshes/大森駅-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅-itu-ceiling_board" name="mesh-大森駅-itu-ceiling_board">
+		<string name="filename" value="meshes/大森駅-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_036-itu-concrete" name="mesh-element_036-itu-concrete">
+		<string name="filename" value="meshes/element_036-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_036-itu-ceiling_board" name="mesh-element_036-itu-ceiling_board">
+		<string name="filename" value="meshes/element_036-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_037-itu-concrete" name="mesh-element_037-itu-concrete">
+		<string name="filename" value="meshes/element_037-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_037-itu-ceiling_board" name="mesh-element_037-itu-ceiling_board">
+		<string name="filename" value="meshes/element_037-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-アトレ大森-itu-concrete" name="mesh-アトレ大森-itu-concrete">
+		<string name="filename" value="meshes/アトレ大森-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-アトレ大森-itu-ceiling_board" name="mesh-アトレ大森-itu-ceiling_board">
+		<string name="filename" value="meshes/アトレ大森-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_038-itu-concrete" name="mesh-element_038-itu-concrete">
+		<string name="filename" value="meshes/element_038-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_038-itu-ceiling_board" name="mesh-element_038-itu-ceiling_board">
+		<string name="filename" value="meshes/element_038-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_039-itu-concrete" name="mesh-element_039-itu-concrete">
+		<string name="filename" value="meshes/element_039-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_039-itu-ceiling_board" name="mesh-element_039-itu-ceiling_board">
+		<string name="filename" value="meshes/element_039-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_040-itu-concrete" name="mesh-element_040-itu-concrete">
+		<string name="filename" value="meshes/element_040-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_040-itu-ceiling_board" name="mesh-element_040-itu-ceiling_board">
+		<string name="filename" value="meshes/element_040-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_041-itu-concrete" name="mesh-element_041-itu-concrete">
+		<string name="filename" value="meshes/element_041-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_041-itu-ceiling_board" name="mesh-element_041-itu-ceiling_board">
+		<string name="filename" value="meshes/element_041-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_042-itu-concrete" name="mesh-element_042-itu-concrete">
+		<string name="filename" value="meshes/element_042-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_042-itu-ceiling_board" name="mesh-element_042-itu-ceiling_board">
+		<string name="filename" value="meshes/element_042-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_043-itu-concrete" name="mesh-element_043-itu-concrete">
+		<string name="filename" value="meshes/element_043-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_043-itu-ceiling_board" name="mesh-element_043-itu-ceiling_board">
+		<string name="filename" value="meshes/element_043-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_044-itu-concrete" name="mesh-element_044-itu-concrete">
+		<string name="filename" value="meshes/element_044-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_044-itu-ceiling_board" name="mesh-element_044-itu-ceiling_board">
+		<string name="filename" value="meshes/element_044-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_045-itu-concrete" name="mesh-element_045-itu-concrete">
+		<string name="filename" value="meshes/element_045-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_045-itu-ceiling_board" name="mesh-element_045-itu-ceiling_board">
+		<string name="filename" value="meshes/element_045-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_046-itu-concrete" name="mesh-element_046-itu-concrete">
+		<string name="filename" value="meshes/element_046-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_046-itu-ceiling_board" name="mesh-element_046-itu-ceiling_board">
+		<string name="filename" value="meshes/element_046-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_047-itu-concrete" name="mesh-element_047-itu-concrete">
+		<string name="filename" value="meshes/element_047-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_047-itu-ceiling_board" name="mesh-element_047-itu-ceiling_board">
+		<string name="filename" value="meshes/element_047-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_048-itu-concrete" name="mesh-element_048-itu-concrete">
+		<string name="filename" value="meshes/element_048-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_048-itu-ceiling_board" name="mesh-element_048-itu-ceiling_board">
+		<string name="filename" value="meshes/element_048-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_049-itu-concrete" name="mesh-element_049-itu-concrete">
+		<string name="filename" value="meshes/element_049-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_049-itu-ceiling_board" name="mesh-element_049-itu-ceiling_board">
+		<string name="filename" value="meshes/element_049-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_050-itu-concrete" name="mesh-element_050-itu-concrete">
+		<string name="filename" value="meshes/element_050-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_050-itu-ceiling_board" name="mesh-element_050-itu-ceiling_board">
+		<string name="filename" value="meshes/element_050-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅前ビル-itu-concrete" name="mesh-大森駅前ビル-itu-concrete">
+		<string name="filename" value="meshes/大森駅前ビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森駅前ビル-itu-ceiling_board" name="mesh-大森駅前ビル-itu-ceiling_board">
+		<string name="filename" value="meshes/大森駅前ビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_051-itu-concrete" name="mesh-element_051-itu-concrete">
+		<string name="filename" value="meshes/element_051-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_051-itu-ceiling_board" name="mesh-element_051-itu-ceiling_board">
+		<string name="filename" value="meshes/element_051-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-合口ビル-itu-concrete" name="mesh-合口ビル-itu-concrete">
+		<string name="filename" value="meshes/合口ビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-合口ビル-itu-ceiling_board" name="mesh-合口ビル-itu-ceiling_board">
+		<string name="filename" value="meshes/合口ビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_052-itu-concrete" name="mesh-element_052-itu-concrete">
+		<string name="filename" value="meshes/element_052-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_052-itu-ceiling_board" name="mesh-element_052-itu-ceiling_board">
+		<string name="filename" value="meshes/element_052-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_053-itu-concrete" name="mesh-element_053-itu-concrete">
+		<string name="filename" value="meshes/element_053-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_053-itu-ceiling_board" name="mesh-element_053-itu-ceiling_board">
+		<string name="filename" value="meshes/element_053-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_054-itu-concrete" name="mesh-element_054-itu-concrete">
+		<string name="filename" value="meshes/element_054-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_054-itu-ceiling_board" name="mesh-element_054-itu-ceiling_board">
+		<string name="filename" value="meshes/element_054-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-第25東ビル-itu-concrete" name="mesh-第25東ビル-itu-concrete">
+		<string name="filename" value="meshes/第25東ビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-第25東ビル-itu-ceiling_board" name="mesh-第25東ビル-itu-ceiling_board">
+		<string name="filename" value="meshes/第25東ビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_055-itu-concrete" name="mesh-element_055-itu-concrete">
+		<string name="filename" value="meshes/element_055-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_055-itu-ceiling_board" name="mesh-element_055-itu-ceiling_board">
+		<string name="filename" value="meshes/element_055-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_056-itu-concrete" name="mesh-element_056-itu-concrete">
+		<string name="filename" value="meshes/element_056-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_056-itu-ceiling_board" name="mesh-element_056-itu-ceiling_board">
+		<string name="filename" value="meshes/element_056-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_057-itu-concrete" name="mesh-element_057-itu-concrete">
+		<string name="filename" value="meshes/element_057-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_057-itu-ceiling_board" name="mesh-element_057-itu-ceiling_board">
+		<string name="filename" value="meshes/element_057-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_058-itu-concrete" name="mesh-element_058-itu-concrete">
+		<string name="filename" value="meshes/element_058-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_058-itu-ceiling_board" name="mesh-element_058-itu-ceiling_board">
+		<string name="filename" value="meshes/element_058-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_059-itu-concrete" name="mesh-element_059-itu-concrete">
+		<string name="filename" value="meshes/element_059-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_059-itu-ceiling_board" name="mesh-element_059-itu-ceiling_board">
+		<string name="filename" value="meshes/element_059-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_060-itu-concrete" name="mesh-element_060-itu-concrete">
+		<string name="filename" value="meshes/element_060-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_060-itu-ceiling_board" name="mesh-element_060-itu-ceiling_board">
+		<string name="filename" value="meshes/element_060-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_061-itu-concrete" name="mesh-element_061-itu-concrete">
+		<string name="filename" value="meshes/element_061-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_061-itu-ceiling_board" name="mesh-element_061-itu-ceiling_board">
+		<string name="filename" value="meshes/element_061-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_062-itu-concrete" name="mesh-element_062-itu-concrete">
+		<string name="filename" value="meshes/element_062-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_062-itu-ceiling_board" name="mesh-element_062-itu-ceiling_board">
+		<string name="filename" value="meshes/element_062-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_063-itu-concrete" name="mesh-element_063-itu-concrete">
+		<string name="filename" value="meshes/element_063-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_063-itu-ceiling_board" name="mesh-element_063-itu-ceiling_board">
+		<string name="filename" value="meshes/element_063-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_064-itu-concrete" name="mesh-element_064-itu-concrete">
+		<string name="filename" value="meshes/element_064-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_064-itu-ceiling_board" name="mesh-element_064-itu-ceiling_board">
+		<string name="filename" value="meshes/element_064-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_065-itu-concrete" name="mesh-element_065-itu-concrete">
+		<string name="filename" value="meshes/element_065-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_065-itu-ceiling_board" name="mesh-element_065-itu-ceiling_board">
+		<string name="filename" value="meshes/element_065-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_066-itu-concrete" name="mesh-element_066-itu-concrete">
+		<string name="filename" value="meshes/element_066-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_066-itu-ceiling_board" name="mesh-element_066-itu-ceiling_board">
+		<string name="filename" value="meshes/element_066-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_067-itu-concrete" name="mesh-element_067-itu-concrete">
+		<string name="filename" value="meshes/element_067-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_067-itu-ceiling_board" name="mesh-element_067-itu-ceiling_board">
+		<string name="filename" value="meshes/element_067-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_068-itu-concrete" name="mesh-element_068-itu-concrete">
+		<string name="filename" value="meshes/element_068-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_068-itu-ceiling_board" name="mesh-element_068-itu-ceiling_board">
+		<string name="filename" value="meshes/element_068-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_069-itu-concrete" name="mesh-element_069-itu-concrete">
+		<string name="filename" value="meshes/element_069-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_069-itu-ceiling_board" name="mesh-element_069-itu-ceiling_board">
+		<string name="filename" value="meshes/element_069-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_070-itu-concrete" name="mesh-element_070-itu-concrete">
+		<string name="filename" value="meshes/element_070-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_070-itu-ceiling_board" name="mesh-element_070-itu-ceiling_board">
+		<string name="filename" value="meshes/element_070-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_071-itu-concrete" name="mesh-element_071-itu-concrete">
+		<string name="filename" value="meshes/element_071-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_071-itu-ceiling_board" name="mesh-element_071-itu-ceiling_board">
+		<string name="filename" value="meshes/element_071-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_072-itu-concrete" name="mesh-element_072-itu-concrete">
+		<string name="filename" value="meshes/element_072-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_072-itu-ceiling_board" name="mesh-element_072-itu-ceiling_board">
+		<string name="filename" value="meshes/element_072-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_073-itu-concrete" name="mesh-element_073-itu-concrete">
+		<string name="filename" value="meshes/element_073-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_073-itu-ceiling_board" name="mesh-element_073-itu-ceiling_board">
+		<string name="filename" value="meshes/element_073-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_074-itu-concrete" name="mesh-element_074-itu-concrete">
+		<string name="filename" value="meshes/element_074-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_074-itu-ceiling_board" name="mesh-element_074-itu-ceiling_board">
+		<string name="filename" value="meshes/element_074-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_075-itu-concrete" name="mesh-element_075-itu-concrete">
+		<string name="filename" value="meshes/element_075-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_075-itu-ceiling_board" name="mesh-element_075-itu-ceiling_board">
+		<string name="filename" value="meshes/element_075-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_076-itu-concrete" name="mesh-element_076-itu-concrete">
+		<string name="filename" value="meshes/element_076-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_076-itu-ceiling_board" name="mesh-element_076-itu-ceiling_board">
+		<string name="filename" value="meshes/element_076-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_077-itu-concrete" name="mesh-element_077-itu-concrete">
+		<string name="filename" value="meshes/element_077-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_077-itu-ceiling_board" name="mesh-element_077-itu-ceiling_board">
+		<string name="filename" value="meshes/element_077-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_078-itu-concrete" name="mesh-element_078-itu-concrete">
+		<string name="filename" value="meshes/element_078-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_078-itu-ceiling_board" name="mesh-element_078-itu-ceiling_board">
+		<string name="filename" value="meshes/element_078-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_079-itu-concrete" name="mesh-element_079-itu-concrete">
+		<string name="filename" value="meshes/element_079-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_079-itu-ceiling_board" name="mesh-element_079-itu-ceiling_board">
+		<string name="filename" value="meshes/element_079-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_080-itu-concrete" name="mesh-element_080-itu-concrete">
+		<string name="filename" value="meshes/element_080-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_080-itu-ceiling_board" name="mesh-element_080-itu-ceiling_board">
+		<string name="filename" value="meshes/element_080-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_081-itu-concrete" name="mesh-element_081-itu-concrete">
+		<string name="filename" value="meshes/element_081-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_081-itu-ceiling_board" name="mesh-element_081-itu-ceiling_board">
+		<string name="filename" value="meshes/element_081-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_082-itu-concrete" name="mesh-element_082-itu-concrete">
+		<string name="filename" value="meshes/element_082-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_082-itu-ceiling_board" name="mesh-element_082-itu-ceiling_board">
+		<string name="filename" value="meshes/element_082-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_083-itu-concrete" name="mesh-element_083-itu-concrete">
+		<string name="filename" value="meshes/element_083-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_083-itu-ceiling_board" name="mesh-element_083-itu-ceiling_board">
+		<string name="filename" value="meshes/element_083-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_084-itu-concrete" name="mesh-element_084-itu-concrete">
+		<string name="filename" value="meshes/element_084-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_084-itu-ceiling_board" name="mesh-element_084-itu-ceiling_board">
+		<string name="filename" value="meshes/element_084-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_085-itu-concrete" name="mesh-element_085-itu-concrete">
+		<string name="filename" value="meshes/element_085-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_085-itu-ceiling_board" name="mesh-element_085-itu-ceiling_board">
+		<string name="filename" value="meshes/element_085-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_086-itu-concrete" name="mesh-element_086-itu-concrete">
+		<string name="filename" value="meshes/element_086-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_086-itu-ceiling_board" name="mesh-element_086-itu-ceiling_board">
+		<string name="filename" value="meshes/element_086-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_087-itu-concrete" name="mesh-element_087-itu-concrete">
+		<string name="filename" value="meshes/element_087-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_087-itu-ceiling_board" name="mesh-element_087-itu-ceiling_board">
+		<string name="filename" value="meshes/element_087-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-コンセール大森山王弐番館-itu-concrete" name="mesh-コンセール大森山王弐番館-itu-concrete">
+		<string name="filename" value="meshes/コンセール大森山王弐番館-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-コンセール大森山王弐番館-itu-ceiling_board" name="mesh-コンセール大森山王弐番館-itu-ceiling_board">
+		<string name="filename" value="meshes/コンセール大森山王弐番館-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_088-itu-concrete" name="mesh-element_088-itu-concrete">
+		<string name="filename" value="meshes/element_088-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_088-itu-ceiling_board" name="mesh-element_088-itu-ceiling_board">
+		<string name="filename" value="meshes/element_088-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_089-itu-concrete" name="mesh-element_089-itu-concrete">
+		<string name="filename" value="meshes/element_089-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_089-itu-ceiling_board" name="mesh-element_089-itu-ceiling_board">
+		<string name="filename" value="meshes/element_089-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_090-itu-concrete" name="mesh-element_090-itu-concrete">
+		<string name="filename" value="meshes/element_090-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_090-itu-ceiling_board" name="mesh-element_090-itu-ceiling_board">
+		<string name="filename" value="meshes/element_090-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-キャビックビル-itu-concrete" name="mesh-キャビックビル-itu-concrete">
+		<string name="filename" value="meshes/キャビックビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-キャビックビル-itu-ceiling_board" name="mesh-キャビックビル-itu-ceiling_board">
+		<string name="filename" value="meshes/キャビックビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_091-itu-concrete" name="mesh-element_091-itu-concrete">
+		<string name="filename" value="meshes/element_091-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_091-itu-ceiling_board" name="mesh-element_091-itu-ceiling_board">
+		<string name="filename" value="meshes/element_091-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_092-itu-concrete" name="mesh-element_092-itu-concrete">
+		<string name="filename" value="meshes/element_092-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_092-itu-ceiling_board" name="mesh-element_092-itu-ceiling_board">
+		<string name="filename" value="meshes/element_092-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_093-itu-concrete" name="mesh-element_093-itu-concrete">
+		<string name="filename" value="meshes/element_093-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_093-itu-ceiling_board" name="mesh-element_093-itu-ceiling_board">
+		<string name="filename" value="meshes/element_093-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-サクラハウス大森-itu-concrete" name="mesh-サクラハウス大森-itu-concrete">
+		<string name="filename" value="meshes/サクラハウス大森-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-サクラハウス大森-itu-ceiling_board" name="mesh-サクラハウス大森-itu-ceiling_board">
+		<string name="filename" value="meshes/サクラハウス大森-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森ララビル-itu-concrete" name="mesh-大森ララビル-itu-concrete">
+		<string name="filename" value="meshes/大森ララビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-大森ララビル-itu-ceiling_board" name="mesh-大森ララビル-itu-ceiling_board">
+		<string name="filename" value="meshes/大森ララビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-コンセール大森山王壱番館-itu-concrete" name="mesh-コンセール大森山王壱番館-itu-concrete">
+		<string name="filename" value="meshes/コンセール大森山王壱番館-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-コンセール大森山王壱番館-itu-ceiling_board" name="mesh-コンセール大森山王壱番館-itu-ceiling_board">
+		<string name="filename" value="meshes/コンセール大森山王壱番館-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_094-itu-concrete" name="mesh-element_094-itu-concrete">
+		<string name="filename" value="meshes/element_094-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_094-itu-ceiling_board" name="mesh-element_094-itu-ceiling_board">
+		<string name="filename" value="meshes/element_094-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-山王パレス-itu-concrete" name="mesh-山王パレス-itu-concrete">
+		<string name="filename" value="meshes/山王パレス-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-山王パレス-itu-ceiling_board" name="mesh-山王パレス-itu-ceiling_board">
+		<string name="filename" value="meshes/山王パレス-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_095-itu-concrete" name="mesh-element_095-itu-concrete">
+		<string name="filename" value="meshes/element_095-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_095-itu-ceiling_board" name="mesh-element_095-itu-ceiling_board">
+		<string name="filename" value="meshes/element_095-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_096-itu-concrete" name="mesh-element_096-itu-concrete">
+		<string name="filename" value="meshes/element_096-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_096-itu-ceiling_board" name="mesh-element_096-itu-ceiling_board">
+		<string name="filename" value="meshes/element_096-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_097-itu-concrete" name="mesh-element_097-itu-concrete">
+		<string name="filename" value="meshes/element_097-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_097-itu-ceiling_board" name="mesh-element_097-itu-ceiling_board">
+		<string name="filename" value="meshes/element_097-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_098-itu-concrete" name="mesh-element_098-itu-concrete">
+		<string name="filename" value="meshes/element_098-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_098-itu-ceiling_board" name="mesh-element_098-itu-ceiling_board">
+		<string name="filename" value="meshes/element_098-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_099-itu-concrete" name="mesh-element_099-itu-concrete">
+		<string name="filename" value="meshes/element_099-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_099-itu-ceiling_board" name="mesh-element_099-itu-ceiling_board">
+		<string name="filename" value="meshes/element_099-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_100-itu-concrete" name="mesh-element_100-itu-concrete">
+		<string name="filename" value="meshes/element_100-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_100-itu-ceiling_board" name="mesh-element_100-itu-ceiling_board">
+		<string name="filename" value="meshes/element_100-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_101-itu-concrete" name="mesh-element_101-itu-concrete">
+		<string name="filename" value="meshes/element_101-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_101-itu-ceiling_board" name="mesh-element_101-itu-ceiling_board">
+		<string name="filename" value="meshes/element_101-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_102-itu-concrete" name="mesh-element_102-itu-concrete">
+		<string name="filename" value="meshes/element_102-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_102-itu-ceiling_board" name="mesh-element_102-itu-ceiling_board">
+		<string name="filename" value="meshes/element_102-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_103-itu-concrete" name="mesh-element_103-itu-concrete">
+		<string name="filename" value="meshes/element_103-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_103-itu-ceiling_board" name="mesh-element_103-itu-ceiling_board">
+		<string name="filename" value="meshes/element_103-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_104-itu-concrete" name="mesh-element_104-itu-concrete">
+		<string name="filename" value="meshes/element_104-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_104-itu-ceiling_board" name="mesh-element_104-itu-ceiling_board">
+		<string name="filename" value="meshes/element_104-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_105-itu-concrete" name="mesh-element_105-itu-concrete">
+		<string name="filename" value="meshes/element_105-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_105-itu-ceiling_board" name="mesh-element_105-itu-ceiling_board">
+		<string name="filename" value="meshes/element_105-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_106-itu-concrete" name="mesh-element_106-itu-concrete">
+		<string name="filename" value="meshes/element_106-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_106-itu-ceiling_board" name="mesh-element_106-itu-ceiling_board">
+		<string name="filename" value="meshes/element_106-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_107-itu-concrete" name="mesh-element_107-itu-concrete">
+		<string name="filename" value="meshes/element_107-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_107-itu-ceiling_board" name="mesh-element_107-itu-ceiling_board">
+		<string name="filename" value="meshes/element_107-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_108-itu-concrete" name="mesh-element_108-itu-concrete">
+		<string name="filename" value="meshes/element_108-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_108-itu-ceiling_board" name="mesh-element_108-itu-ceiling_board">
+		<string name="filename" value="meshes/element_108-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_109-itu-concrete" name="mesh-element_109-itu-concrete">
+		<string name="filename" value="meshes/element_109-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_109-itu-ceiling_board" name="mesh-element_109-itu-ceiling_board">
+		<string name="filename" value="meshes/element_109-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_110-itu-concrete" name="mesh-element_110-itu-concrete">
+		<string name="filename" value="meshes/element_110-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_110-itu-ceiling_board" name="mesh-element_110-itu-ceiling_board">
+		<string name="filename" value="meshes/element_110-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_111-itu-concrete" name="mesh-element_111-itu-concrete">
+		<string name="filename" value="meshes/element_111-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_111-itu-ceiling_board" name="mesh-element_111-itu-ceiling_board">
+		<string name="filename" value="meshes/element_111-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Japan_Newart_College-itu-concrete" name="mesh-Japan_Newart_College-itu-concrete">
+		<string name="filename" value="meshes/Japan_Newart_College-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Japan_Newart_College-itu-ceiling_board" name="mesh-Japan_Newart_College-itu-ceiling_board">
+		<string name="filename" value="meshes/Japan_Newart_College-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_112-itu-concrete" name="mesh-element_112-itu-concrete">
+		<string name="filename" value="meshes/element_112-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_112-itu-ceiling_board" name="mesh-element_112-itu-ceiling_board">
+		<string name="filename" value="meshes/element_112-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-パークコート山王二丁目-itu-concrete" name="mesh-パークコート山王二丁目-itu-concrete">
+		<string name="filename" value="meshes/パークコート山王二丁目-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-パークコート山王二丁目-itu-ceiling_board" name="mesh-パークコート山王二丁目-itu-ceiling_board">
+		<string name="filename" value="meshes/パークコート山王二丁目-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_113-itu-concrete" name="mesh-element_113-itu-concrete">
+		<string name="filename" value="meshes/element_113-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_113-itu-ceiling_board" name="mesh-element_113-itu-ceiling_board">
+		<string name="filename" value="meshes/element_113-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_114-itu-concrete" name="mesh-element_114-itu-concrete">
+		<string name="filename" value="meshes/element_114-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_114-itu-ceiling_board" name="mesh-element_114-itu-ceiling_board">
+		<string name="filename" value="meshes/element_114-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_115-itu-concrete" name="mesh-element_115-itu-concrete">
+		<string name="filename" value="meshes/element_115-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_115-itu-ceiling_board" name="mesh-element_115-itu-ceiling_board">
+		<string name="filename" value="meshes/element_115-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_116-itu-concrete" name="mesh-element_116-itu-concrete">
+		<string name="filename" value="meshes/element_116-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_116-itu-ceiling_board" name="mesh-element_116-itu-ceiling_board">
+		<string name="filename" value="meshes/element_116-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_117-itu-concrete" name="mesh-element_117-itu-concrete">
+		<string name="filename" value="meshes/element_117-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_117-itu-ceiling_board" name="mesh-element_117-itu-ceiling_board">
+		<string name="filename" value="meshes/element_117-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_118-itu-concrete" name="mesh-element_118-itu-concrete">
+		<string name="filename" value="meshes/element_118-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_118-itu-ceiling_board" name="mesh-element_118-itu-ceiling_board">
+		<string name="filename" value="meshes/element_118-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_119-itu-concrete" name="mesh-element_119-itu-concrete">
+		<string name="filename" value="meshes/element_119-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_119-itu-ceiling_board" name="mesh-element_119-itu-ceiling_board">
+		<string name="filename" value="meshes/element_119-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_120-itu-concrete" name="mesh-element_120-itu-concrete">
+		<string name="filename" value="meshes/element_120-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_120-itu-ceiling_board" name="mesh-element_120-itu-ceiling_board">
+		<string name="filename" value="meshes/element_120-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_121-itu-concrete" name="mesh-element_121-itu-concrete">
+		<string name="filename" value="meshes/element_121-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_121-itu-ceiling_board" name="mesh-element_121-itu-ceiling_board">
+		<string name="filename" value="meshes/element_121-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_122-itu-concrete" name="mesh-element_122-itu-concrete">
+		<string name="filename" value="meshes/element_122-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_122-itu-ceiling_board" name="mesh-element_122-itu-ceiling_board">
+		<string name="filename" value="meshes/element_122-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_123-itu-concrete" name="mesh-element_123-itu-concrete">
+		<string name="filename" value="meshes/element_123-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_123-itu-ceiling_board" name="mesh-element_123-itu-ceiling_board">
+		<string name="filename" value="meshes/element_123-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_124-itu-concrete" name="mesh-element_124-itu-concrete">
+		<string name="filename" value="meshes/element_124-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_124-itu-ceiling_board" name="mesh-element_124-itu-ceiling_board">
+		<string name="filename" value="meshes/element_124-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_125-itu-concrete" name="mesh-element_125-itu-concrete">
+		<string name="filename" value="meshes/element_125-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_125-itu-ceiling_board" name="mesh-element_125-itu-ceiling_board">
+		<string name="filename" value="meshes/element_125-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_126-itu-concrete" name="mesh-element_126-itu-concrete">
+		<string name="filename" value="meshes/element_126-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_126-itu-ceiling_board" name="mesh-element_126-itu-ceiling_board">
+		<string name="filename" value="meshes/element_126-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_127-itu-concrete" name="mesh-element_127-itu-concrete">
+		<string name="filename" value="meshes/element_127-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_127-itu-ceiling_board" name="mesh-element_127-itu-ceiling_board">
+		<string name="filename" value="meshes/element_127-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_128-itu-concrete" name="mesh-element_128-itu-concrete">
+		<string name="filename" value="meshes/element_128-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_128-itu-ceiling_board" name="mesh-element_128-itu-ceiling_board">
+		<string name="filename" value="meshes/element_128-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_129-itu-concrete" name="mesh-element_129-itu-concrete">
+		<string name="filename" value="meshes/element_129-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_129-itu-ceiling_board" name="mesh-element_129-itu-ceiling_board">
+		<string name="filename" value="meshes/element_129-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_130-itu-concrete" name="mesh-element_130-itu-concrete">
+		<string name="filename" value="meshes/element_130-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_130-itu-ceiling_board" name="mesh-element_130-itu-ceiling_board">
+		<string name="filename" value="meshes/element_130-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_131-itu-concrete" name="mesh-element_131-itu-concrete">
+		<string name="filename" value="meshes/element_131-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_131-itu-ceiling_board" name="mesh-element_131-itu-ceiling_board">
+		<string name="filename" value="meshes/element_131-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_132-itu-concrete" name="mesh-element_132-itu-concrete">
+		<string name="filename" value="meshes/element_132-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_132-itu-ceiling_board" name="mesh-element_132-itu-ceiling_board">
+		<string name="filename" value="meshes/element_132-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_133-itu-concrete" name="mesh-element_133-itu-concrete">
+		<string name="filename" value="meshes/element_133-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_133-itu-ceiling_board" name="mesh-element_133-itu-ceiling_board">
+		<string name="filename" value="meshes/element_133-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_134-itu-concrete" name="mesh-element_134-itu-concrete">
+		<string name="filename" value="meshes/element_134-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_134-itu-ceiling_board" name="mesh-element_134-itu-ceiling_board">
+		<string name="filename" value="meshes/element_134-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_135-itu-concrete" name="mesh-element_135-itu-concrete">
+		<string name="filename" value="meshes/element_135-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_135-itu-ceiling_board" name="mesh-element_135-itu-ceiling_board">
+		<string name="filename" value="meshes/element_135-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_136-itu-concrete" name="mesh-element_136-itu-concrete">
+		<string name="filename" value="meshes/element_136-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_136-itu-ceiling_board" name="mesh-element_136-itu-ceiling_board">
+		<string name="filename" value="meshes/element_136-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_137-itu-concrete" name="mesh-element_137-itu-concrete">
+		<string name="filename" value="meshes/element_137-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_137-itu-ceiling_board" name="mesh-element_137-itu-ceiling_board">
+		<string name="filename" value="meshes/element_137-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_138-itu-concrete" name="mesh-element_138-itu-concrete">
+		<string name="filename" value="meshes/element_138-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_138-itu-ceiling_board" name="mesh-element_138-itu-ceiling_board">
+		<string name="filename" value="meshes/element_138-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_139-itu-concrete" name="mesh-element_139-itu-concrete">
+		<string name="filename" value="meshes/element_139-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_139-itu-ceiling_board" name="mesh-element_139-itu-ceiling_board">
+		<string name="filename" value="meshes/element_139-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_140-itu-concrete" name="mesh-element_140-itu-concrete">
+		<string name="filename" value="meshes/element_140-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_140-itu-ceiling_board" name="mesh-element_140-itu-ceiling_board">
+		<string name="filename" value="meshes/element_140-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_141-itu-concrete" name="mesh-element_141-itu-concrete">
+		<string name="filename" value="meshes/element_141-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_141-itu-ceiling_board" name="mesh-element_141-itu-ceiling_board">
+		<string name="filename" value="meshes/element_141-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_142-itu-concrete" name="mesh-element_142-itu-concrete">
+		<string name="filename" value="meshes/element_142-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_142-itu-ceiling_board" name="mesh-element_142-itu-ceiling_board">
+		<string name="filename" value="meshes/element_142-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_143-itu-concrete" name="mesh-element_143-itu-concrete">
+		<string name="filename" value="meshes/element_143-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_143-itu-ceiling_board" name="mesh-element_143-itu-ceiling_board">
+		<string name="filename" value="meshes/element_143-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_144-itu-concrete" name="mesh-element_144-itu-concrete">
+		<string name="filename" value="meshes/element_144-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_144-itu-ceiling_board" name="mesh-element_144-itu-ceiling_board">
+		<string name="filename" value="meshes/element_144-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_145-itu-concrete" name="mesh-element_145-itu-concrete">
+		<string name="filename" value="meshes/element_145-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_145-itu-ceiling_board" name="mesh-element_145-itu-ceiling_board">
+		<string name="filename" value="meshes/element_145-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_146-itu-concrete" name="mesh-element_146-itu-concrete">
+		<string name="filename" value="meshes/element_146-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_146-itu-ceiling_board" name="mesh-element_146-itu-ceiling_board">
+		<string name="filename" value="meshes/element_146-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_147-itu-concrete" name="mesh-element_147-itu-concrete">
+		<string name="filename" value="meshes/element_147-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_147-itu-ceiling_board" name="mesh-element_147-itu-ceiling_board">
+		<string name="filename" value="meshes/element_147-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_148-itu-concrete" name="mesh-element_148-itu-concrete">
+		<string name="filename" value="meshes/element_148-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_148-itu-ceiling_board" name="mesh-element_148-itu-ceiling_board">
+		<string name="filename" value="meshes/element_148-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_149-itu-concrete" name="mesh-element_149-itu-concrete">
+		<string name="filename" value="meshes/element_149-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_149-itu-ceiling_board" name="mesh-element_149-itu-ceiling_board">
+		<string name="filename" value="meshes/element_149-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_150-itu-concrete" name="mesh-element_150-itu-concrete">
+		<string name="filename" value="meshes/element_150-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_150-itu-ceiling_board" name="mesh-element_150-itu-ceiling_board">
+		<string name="filename" value="meshes/element_150-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_151-itu-concrete" name="mesh-element_151-itu-concrete">
+		<string name="filename" value="meshes/element_151-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_151-itu-ceiling_board" name="mesh-element_151-itu-ceiling_board">
+		<string name="filename" value="meshes/element_151-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_152-itu-concrete" name="mesh-element_152-itu-concrete">
+		<string name="filename" value="meshes/element_152-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_152-itu-ceiling_board" name="mesh-element_152-itu-ceiling_board">
+		<string name="filename" value="meshes/element_152-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_153-itu-concrete" name="mesh-element_153-itu-concrete">
+		<string name="filename" value="meshes/element_153-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_153-itu-ceiling_board" name="mesh-element_153-itu-ceiling_board">
+		<string name="filename" value="meshes/element_153-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_154-itu-concrete" name="mesh-element_154-itu-concrete">
+		<string name="filename" value="meshes/element_154-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_154-itu-ceiling_board" name="mesh-element_154-itu-ceiling_board">
+		<string name="filename" value="meshes/element_154-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_155-itu-concrete" name="mesh-element_155-itu-concrete">
+		<string name="filename" value="meshes/element_155-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_155-itu-ceiling_board" name="mesh-element_155-itu-ceiling_board">
+		<string name="filename" value="meshes/element_155-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_156-itu-concrete" name="mesh-element_156-itu-concrete">
+		<string name="filename" value="meshes/element_156-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_156-itu-ceiling_board" name="mesh-element_156-itu-ceiling_board">
+		<string name="filename" value="meshes/element_156-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_157-itu-concrete" name="mesh-element_157-itu-concrete">
+		<string name="filename" value="meshes/element_157-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_157-itu-ceiling_board" name="mesh-element_157-itu-ceiling_board">
+		<string name="filename" value="meshes/element_157-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_158-itu-concrete" name="mesh-element_158-itu-concrete">
+		<string name="filename" value="meshes/element_158-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_158-itu-ceiling_board" name="mesh-element_158-itu-ceiling_board">
+		<string name="filename" value="meshes/element_158-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_159-itu-concrete" name="mesh-element_159-itu-concrete">
+		<string name="filename" value="meshes/element_159-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_159-itu-ceiling_board" name="mesh-element_159-itu-ceiling_board">
+		<string name="filename" value="meshes/element_159-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_160-itu-concrete" name="mesh-element_160-itu-concrete">
+		<string name="filename" value="meshes/element_160-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_160-itu-ceiling_board" name="mesh-element_160-itu-ceiling_board">
+		<string name="filename" value="meshes/element_160-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_161-itu-concrete" name="mesh-element_161-itu-concrete">
+		<string name="filename" value="meshes/element_161-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_161-itu-ceiling_board" name="mesh-element_161-itu-ceiling_board">
+		<string name="filename" value="meshes/element_161-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_162-itu-concrete" name="mesh-element_162-itu-concrete">
+		<string name="filename" value="meshes/element_162-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_162-itu-ceiling_board" name="mesh-element_162-itu-ceiling_board">
+		<string name="filename" value="meshes/element_162-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_163-itu-concrete" name="mesh-element_163-itu-concrete">
+		<string name="filename" value="meshes/element_163-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_163-itu-ceiling_board" name="mesh-element_163-itu-ceiling_board">
+		<string name="filename" value="meshes/element_163-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_164-itu-concrete" name="mesh-element_164-itu-concrete">
+		<string name="filename" value="meshes/element_164-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_164-itu-ceiling_board" name="mesh-element_164-itu-ceiling_board">
+		<string name="filename" value="meshes/element_164-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_165-itu-concrete" name="mesh-element_165-itu-concrete">
+		<string name="filename" value="meshes/element_165-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_165-itu-ceiling_board" name="mesh-element_165-itu-ceiling_board">
+		<string name="filename" value="meshes/element_165-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_166-itu-concrete" name="mesh-element_166-itu-concrete">
+		<string name="filename" value="meshes/element_166-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_166-itu-ceiling_board" name="mesh-element_166-itu-ceiling_board">
+		<string name="filename" value="meshes/element_166-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_167-itu-concrete" name="mesh-element_167-itu-concrete">
+		<string name="filename" value="meshes/element_167-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_167-itu-ceiling_board" name="mesh-element_167-itu-ceiling_board">
+		<string name="filename" value="meshes/element_167-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_168-itu-concrete" name="mesh-element_168-itu-concrete">
+		<string name="filename" value="meshes/element_168-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_168-itu-ceiling_board" name="mesh-element_168-itu-ceiling_board">
+		<string name="filename" value="meshes/element_168-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_169-itu-concrete" name="mesh-element_169-itu-concrete">
+		<string name="filename" value="meshes/element_169-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_169-itu-ceiling_board" name="mesh-element_169-itu-ceiling_board">
+		<string name="filename" value="meshes/element_169-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_170-itu-concrete" name="mesh-element_170-itu-concrete">
+		<string name="filename" value="meshes/element_170-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_170-itu-ceiling_board" name="mesh-element_170-itu-ceiling_board">
+		<string name="filename" value="meshes/element_170-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_171-itu-concrete" name="mesh-element_171-itu-concrete">
+		<string name="filename" value="meshes/element_171-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_171-itu-ceiling_board" name="mesh-element_171-itu-ceiling_board">
+		<string name="filename" value="meshes/element_171-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_172-itu-concrete" name="mesh-element_172-itu-concrete">
+		<string name="filename" value="meshes/element_172-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_172-itu-ceiling_board" name="mesh-element_172-itu-ceiling_board">
+		<string name="filename" value="meshes/element_172-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_173-itu-concrete" name="mesh-element_173-itu-concrete">
+		<string name="filename" value="meshes/element_173-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_173-itu-ceiling_board" name="mesh-element_173-itu-ceiling_board">
+		<string name="filename" value="meshes/element_173-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_174-itu-concrete" name="mesh-element_174-itu-concrete">
+		<string name="filename" value="meshes/element_174-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_174-itu-ceiling_board" name="mesh-element_174-itu-ceiling_board">
+		<string name="filename" value="meshes/element_174-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_175-itu-concrete" name="mesh-element_175-itu-concrete">
+		<string name="filename" value="meshes/element_175-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_175-itu-ceiling_board" name="mesh-element_175-itu-ceiling_board">
+		<string name="filename" value="meshes/element_175-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_176-itu-concrete" name="mesh-element_176-itu-concrete">
+		<string name="filename" value="meshes/element_176-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_176-itu-ceiling_board" name="mesh-element_176-itu-ceiling_board">
+		<string name="filename" value="meshes/element_176-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_177-itu-concrete" name="mesh-element_177-itu-concrete">
+		<string name="filename" value="meshes/element_177-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_177-itu-ceiling_board" name="mesh-element_177-itu-ceiling_board">
+		<string name="filename" value="meshes/element_177-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_178-itu-concrete" name="mesh-element_178-itu-concrete">
+		<string name="filename" value="meshes/element_178-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_178-itu-ceiling_board" name="mesh-element_178-itu-ceiling_board">
+		<string name="filename" value="meshes/element_178-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_179-itu-concrete" name="mesh-element_179-itu-concrete">
+		<string name="filename" value="meshes/element_179-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_179-itu-ceiling_board" name="mesh-element_179-itu-ceiling_board">
+		<string name="filename" value="meshes/element_179-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_180-itu-concrete" name="mesh-element_180-itu-concrete">
+		<string name="filename" value="meshes/element_180-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_180-itu-ceiling_board" name="mesh-element_180-itu-ceiling_board">
+		<string name="filename" value="meshes/element_180-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_181-itu-concrete" name="mesh-element_181-itu-concrete">
+		<string name="filename" value="meshes/element_181-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_181-itu-ceiling_board" name="mesh-element_181-itu-ceiling_board">
+		<string name="filename" value="meshes/element_181-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_182-itu-concrete" name="mesh-element_182-itu-concrete">
+		<string name="filename" value="meshes/element_182-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_182-itu-ceiling_board" name="mesh-element_182-itu-ceiling_board">
+		<string name="filename" value="meshes/element_182-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_183-itu-concrete" name="mesh-element_183-itu-concrete">
+		<string name="filename" value="meshes/element_183-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_183-itu-ceiling_board" name="mesh-element_183-itu-ceiling_board">
+		<string name="filename" value="meshes/element_183-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_184-itu-concrete" name="mesh-element_184-itu-concrete">
+		<string name="filename" value="meshes/element_184-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_184-itu-ceiling_board" name="mesh-element_184-itu-ceiling_board">
+		<string name="filename" value="meshes/element_184-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_185-itu-concrete" name="mesh-element_185-itu-concrete">
+		<string name="filename" value="meshes/element_185-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_185-itu-ceiling_board" name="mesh-element_185-itu-ceiling_board">
+		<string name="filename" value="meshes/element_185-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_186-itu-concrete" name="mesh-element_186-itu-concrete">
+		<string name="filename" value="meshes/element_186-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_186-itu-ceiling_board" name="mesh-element_186-itu-ceiling_board">
+		<string name="filename" value="meshes/element_186-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_187" name="mesh-element_187">
+		<string name="filename" value="meshes/element_187.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_188-itu-concrete" name="mesh-element_188-itu-concrete">
+		<string name="filename" value="meshes/element_188-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_188-itu-ceiling_board" name="mesh-element_188-itu-ceiling_board">
+		<string name="filename" value="meshes/element_188-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_189-itu-concrete" name="mesh-element_189-itu-concrete">
+		<string name="filename" value="meshes/element_189-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_189-itu-ceiling_board" name="mesh-element_189-itu-ceiling_board">
+		<string name="filename" value="meshes/element_189-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_190-itu-concrete" name="mesh-element_190-itu-concrete">
+		<string name="filename" value="meshes/element_190-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_190-itu-ceiling_board" name="mesh-element_190-itu-ceiling_board">
+		<string name="filename" value="meshes/element_190-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Proud_Sannou-itu-concrete" name="mesh-Proud_Sannou-itu-concrete">
+		<string name="filename" value="meshes/Proud_Sannou-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-Proud_Sannou-itu-ceiling_board" name="mesh-Proud_Sannou-itu-ceiling_board">
+		<string name="filename" value="meshes/Proud_Sannou-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_191-itu-concrete" name="mesh-element_191-itu-concrete">
+		<string name="filename" value="meshes/element_191-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_191-itu-ceiling_board" name="mesh-element_191-itu-ceiling_board">
+		<string name="filename" value="meshes/element_191-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-TAISEI_BLD-itu-concrete" name="mesh-TAISEI_BLD-itu-concrete">
+		<string name="filename" value="meshes/TAISEI_BLD-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-TAISEI_BLD-itu-ceiling_board" name="mesh-TAISEI_BLD-itu-ceiling_board">
+		<string name="filename" value="meshes/TAISEI_BLD-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_192-itu-concrete" name="mesh-element_192-itu-concrete">
+		<string name="filename" value="meshes/element_192-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_192-itu-ceiling_board" name="mesh-element_192-itu-ceiling_board">
+		<string name="filename" value="meshes/element_192-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_193-itu-concrete" name="mesh-element_193-itu-concrete">
+		<string name="filename" value="meshes/element_193-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_193-itu-ceiling_board" name="mesh-element_193-itu-ceiling_board">
+		<string name="filename" value="meshes/element_193-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-新大ビル-itu-concrete" name="mesh-新大ビル-itu-concrete">
+		<string name="filename" value="meshes/新大ビル-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-新大ビル-itu-ceiling_board" name="mesh-新大ビル-itu-ceiling_board">
+		<string name="filename" value="meshes/新大ビル-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_194-itu-concrete" name="mesh-element_194-itu-concrete">
+		<string name="filename" value="meshes/element_194-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_194-itu-ceiling_board" name="mesh-element_194-itu-ceiling_board">
+		<string name="filename" value="meshes/element_194-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_195-itu-concrete" name="mesh-element_195-itu-concrete">
+		<string name="filename" value="meshes/element_195-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_195-itu-ceiling_board" name="mesh-element_195-itu-ceiling_board">
+		<string name="filename" value="meshes/element_195-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_196-itu-concrete" name="mesh-element_196-itu-concrete">
+		<string name="filename" value="meshes/element_196-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_196-itu-ceiling_board" name="mesh-element_196-itu-ceiling_board">
+		<string name="filename" value="meshes/element_196-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_197-itu-concrete" name="mesh-element_197-itu-concrete">
+		<string name="filename" value="meshes/element_197-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_197-itu-ceiling_board" name="mesh-element_197-itu-ceiling_board">
+		<string name="filename" value="meshes/element_197-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_198-itu-concrete" name="mesh-element_198-itu-concrete">
+		<string name="filename" value="meshes/element_198-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-element_198-itu-ceiling_board" name="mesh-element_198-itu-ceiling_board">
+		<string name="filename" value="meshes/element_198-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-朝日山王マンション-itu-ceiling_board" name="mesh-朝日山王マンション-itu-ceiling_board">
+		<string name="filename" value="meshes/朝日山王マンション-itu-ceiling_board.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-ceiling_board" name="bsdf"/>
+	</shape>
+	<shape type="ply" id="mesh-朝日山王マンション-itu-concrete" name="mesh-朝日山王マンション-itu-concrete">
+		<string name="filename" value="meshes/朝日山王マンション-itu-concrete.ply"/>
+		<boolean name="face_normals" value="true"/>
+		<ref id="itu-concrete" name="bsdf"/>
+	</shape>
+
+<!-- Volumes -->
+
+</scene>
