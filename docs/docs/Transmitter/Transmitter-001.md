@@ -32,7 +32,14 @@ For this test, a single Tx and Rx are deployed in a 500 m × 500 m urban outdoor
 
 !!! warning "Default Transmitter Orientation in Sionna"
 
-    The default transmitter orientation in Sionna is 90°, not 0°. Therefore, a necessary adjustment needs to be made to synchronize scene north (0°) with the default Tx orientation.
+    The default transmitter orientation in Sionna is different from the compass bearing or Blender scene true north — it is shifted by 90° and rotates in a counterclockwise direction. Therefore, a necessary adjustment needs to be made to synchronize the scene true north (0°) with the default transmitter orientation. [Ref](https://nvlabs.github.io/sionna/rt/api/antenna_pattern.html#sionna.rt.AntennaPattern.show)
+
+    | Compass Bearing | Scene Direction (Y Forward, Z Up) | Transmitter Azimuth Orientation |
+    |-----------------|-----------------------------------|---------------------------------|
+    | 0° (North)      | 0° (Y+)                           | 90°                             |
+    | 90° (East)      | 90° (X+)                          | 0°                              |
+    | 180° (South)    | 180° (Y-)                         | 270°                            |
+    | 270° (West)     | 270° (X-)                         | 180°                            |
 
 ## Results
 
