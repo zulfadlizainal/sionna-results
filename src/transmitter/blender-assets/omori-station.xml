@@ -13,7 +13,7 @@
 
 	<bsdf type="twosided" id="itu-medium_dry_ground" name="itu-medium_dry_ground">
 		<bsdf type="diffuse" name="bsdf">
-			<rgb value="0.800497 0.267374 0.007669" name="reflectance"/>
+			<rgb value="0.50 0.40 0.30" name="reflectance"/>
 		</bsdf>
 	</bsdf>
 	<bsdf type="diffuse" id="itu-concrete" name="itu-concrete">
