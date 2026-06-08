@@ -4,7 +4,7 @@
 
 <!-- Objective and Hypothesis and Expected Output-->
 
-When implementing either a [Transmitter](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Transmitter) or [Receiver](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Receiver) in Sionna, there is an option to configure the orientation of the [Radio Device](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#). For a [Transmitter](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Transmitter), the common term for orientation in radio network implementation is called azimuth, where an azimuth of 0° means facing north. In this experiment, the effect of changing the azimuth of a single transmit antenna will be tested to understand its impact.
+When implementing either a [Transmitter](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Transmitter) or [Receiver](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Receiver) in Sionna, there is an option to configure the orientation of the [Radio Device](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#). For a [Transmitter](https://nvlabs.github.io/sionna/rt/api/radio_devices.html#sionna.rt.Transmitter), the common term for orientation in X axis in radio network implementation is called azimuth, where an azimuth of 0° means facing north. In this experiment, the effect of changing the azimuth of a single transmit antenna will be tested to understand its impact.
 
 !!! example "Variables in this test"
 
@@ -30,9 +30,9 @@ For this test, a single Tx and Rx are deployed in a 500 m × 500 m urban outdoor
     Rx Orientation = Towards Tx
     ```
 
-!!! warning "Default Transmitter Orientation in Sionna"
+!!! warning "Default Transmitter Azimuth Orientation in Sionna"
 
-    The default transmitter orientation in Sionna is different from the compass bearing or Blender scene true north — it is shifted by 90° and rotates in a counterclockwise direction. Therefore, a necessary adjustment needs to be made to synchronize the scene true north (0°) with the default transmitter orientation. [Ref](https://nvlabs.github.io/sionna/rt/api/antenna_pattern.html#sionna.rt.AntennaPattern.show)
+    The default transmitter azimuth orientation in Sionna is different from the compass bearing or Blender scene true north — it is shifted by 90° and rotates in a counterclockwise direction. Therefore, a necessary adjustment needs to be made to synchronize the scene true north (0°) with the default transmitter orientation. [Ref](https://nvlabs.github.io/sionna/rt/api/antenna_pattern.html#sionna.rt.AntennaPattern.show)
 
     | Compass Bearing | Scene Direction (Y Forward, Z Up) | Transmitter Azimuth Orientation |
     |-----------------|-----------------------------------|---------------------------------|

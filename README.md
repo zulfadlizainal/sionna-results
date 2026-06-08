@@ -24,6 +24,7 @@ List of experiments published in the repository so far:
 | Blockage-002 | Effect of Signal Attenuation at Different Frequencies Through a Blockage | ✅ Done | 2026-05-29 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
 | Multipath-001 | Extracting Sionna Paths Channel Coefficients (a) and Sionna Paths Delay (tau) | ✅ Done | 2026-06-04 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
 | Transmitter-001 | Effect of Azimuth Changes in a Directional Antenna | ✅ Done | 2026-06-05 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
+| Transmitter-002 | Effect of Tilt Changes in a Directional Antenna | ✅ Done | 2026-06-08 | v2.0.1 | [View](https://zulfadlizainal.github.io/sionna-results/) |
 
 ## Requirements
 
