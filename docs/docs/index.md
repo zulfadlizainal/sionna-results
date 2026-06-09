@@ -18,6 +18,7 @@ List of experiments published in the repository so far:
 | Blockage-002 | Effect of Signal Attenuation at Different Frequencies Through a Blockage | ✅ Done | 2026-05-29 | v2.0.1 | [View](Blockage/Blockage-002) |
 | Multipath-001 | Extracting Sionna Paths Channel Coefficients (a) and Sionna Paths Delay (tau) | ✅ Done | 2026-06-04 | v2.0.1 | [View](Multipath/Multipath-001) |
 | Multipath-002 | Extracting Sionna Path Interaction Types | ✅ Done | 2026-06-09 | v2.0.1 | [View](Multipath/Multipath-002) |
+| Multipath-003 | Tracing Sionna Ray Paths | ✅ Done | 2026-06-09 | v2.0.1 | [View](Multipath/Multipath-003) |
 | Transmitter-001 | Effect of Azimuth Changes in a Directional Antenna | ✅ Done | 2026-06-05 | v2.0.1 | [View](Transmitter/Transmitter-001) |
 | Transmitter-002 | Effect of Tilt Changes in a Directional Antenna | ✅ Done | 2026-06-08 | v2.0.1 | [View](Transmitter/Transmitter-002) |
 
