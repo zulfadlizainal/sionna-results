@@ -70,7 +70,7 @@ The coherent RSS is consistently lower than the non-coherent RSS because the coh
 
 ## Source Code
 
-Regenerate the results from [source](https://github.com/zulfadlizainal/sionna-results/tree/main/src) ⬇️
+Reproduce the results from [source](https://github.com/zulfadlizainal/sionna-results/tree/main/src) ⬇️
 
 <details>
   <summary>Python</summary>

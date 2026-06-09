@@ -79,7 +79,7 @@ There is observable degradation in RSS at mmWave frequencies compared to other S
 
 ## Source Code
 
-Regenerate the results from [source](https://github.com/zulfadlizainal/sionna-results/tree/main/src) ⬇️
+Reproduce the results from [source](https://github.com/zulfadlizainal/sionna-results/tree/main/src) ⬇️
 
 <details>
   <summary>python</summary>
