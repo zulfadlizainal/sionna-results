@@ -1,4 +1,4 @@
-# Transmitter-002: Effect of Tilt Changes in a Directional Antenna
+# Antenna-002: Effect of Tilt Changes in a Directional Antenna
 
 ## Test Description
 

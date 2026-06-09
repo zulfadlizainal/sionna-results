@@ -1,4 +1,4 @@
-# Transmitter-001: Effect of Azimuth Changes in a Directional Antenna
+# Antenna-001: Effect of Azimuth Changes in a Directional Antenna
 
 ## Test Description
 
