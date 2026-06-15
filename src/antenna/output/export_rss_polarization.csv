@@ -1,0 +1,17 @@
+tx_pol,rx_pol,combination,rss_non_coherent,num_rx,num_rx_ant,num_tx,num_tx_ant,num_paths
+V,V,V-V,-67.31479,1,1,1,1,2
+V,H,V-H,-217.50598,1,1,1,1,2
+V,VH,V-VH,-67.31479,1,2,1,1,2
+V,cross,V-cross,-67.31479,1,2,1,1,2
+H,V,H-V,-217.48434,1,1,1,1,2
+H,H,H-H,-66.40853,1,1,1,1,2
+H,VH,H-VH,-66.40853,1,2,1,1,2
+H,cross,H-cross,-66.40853,1,2,1,1,2
+VH,V,VH-V,-67.31479,1,1,1,2,2
+VH,H,VH-H,-66.40853,1,1,1,2,2
+VH,VH,VH-VH,-63.827766,1,2,1,2,2
+VH,cross,VH-cross,-63.827766,1,2,1,2,2
+cross,V,cross-V,-67.31479,1,1,1,2,2
+cross,H,cross-H,-66.40853,1,1,1,2,2
+cross,VH,cross-VH,-63.827766,1,2,1,2,2
+cross,cross,cross-cross,-63.827766,1,2,1,2,2
