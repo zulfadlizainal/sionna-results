@@ -1,4 +1,4 @@
-# Antenna-004: Effect of Different Tx-Rx Polarization Combinations on Received Signal Strength
+# Antenna-004: Effect of Different Tx-Rx Polarization Combinations
 
 ## Test Description
 
