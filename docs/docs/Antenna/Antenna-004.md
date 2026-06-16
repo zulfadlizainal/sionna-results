@@ -72,11 +72,11 @@ As shown in the results below, when a Dual-Polarized or Cross-Polarized antenna 
 
 ### Key Takeaways
 
-- Matching polarizations between the Tx and Rx produce significantly higher RSS than mismatched polarizations.
+1. Matching polarizations between the Tx and Rx produce significantly higher RSS than mismatched polarizations.
 
-- Using dual-polarized and cross-polarized antennas at both the Tx and Rx provides approximately 3 dB higher RSS compared to using them only at either the Tx or Rx, or at neither.
+2. Using dual-polarized and cross-polarized antennas at both the Tx and Rx provides approximately 3 dB higher RSS compared to using them only at either the Tx or Rx, or at neither.
 
-- The number of antenna ports in `Paths.a` changes with the antenna polarization configuration.
+3. The number of antenna ports in `Paths.a` changes with the antenna polarization configuration.
 
 ## Source Code
 

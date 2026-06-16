@@ -18,7 +18,7 @@ List of experiments published in the repository so far:
 | Antenna-002 | Effect of Tilt Changes in a Directional Antenna | ✅ Done | 2026-06-08 | v2.0.1 | [View](Antenna/Antenna-002) |
 | Antenna-003 | Evaluation of Pre-Installed Antenna Gain Patterns in Sionna | ✅ Done | 2026-06-10 | v2.0.1 | [View](Antenna/Antenna-003) |
 | Antenna-004 | Effect of Different Tx-Rx Polarization Combinations | ✅ Done | 2026-06-15 | v2.0.1 | [View](Antenna/Antenna-004) |
-| Antenna-005 | Effect of Antenna Array Changes in Transmitter | 📌 Plan |   |   |   |
+| Antenna-005 | Effect of Increasing Antenna Array Elements in MIMO Antennas | ✅ Done | 2026-06-16 | v2.0.1 | [View](Antenna/Antenna-005) |
 | Blockage-001 | Effect of Signal Attenuation Across Different Blocking Materials | ✅ Done | 2026-05-28 | v2.0.1 | [View](Blockage/Blockage-001) |
 | Blockage-002 | Effect of Signal Attenuation at Different Frequencies Through a Blockage | ✅ Done | 2026-05-29 | v2.0.1 | [View](Blockage/Blockage-002) |
 | Blockage-003 | Path Tracing for Refraction Cases in Glass | 📌 Plan |   |   |   |
